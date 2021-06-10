@@ -1,31 +1,27 @@
-# Kade Engine Lua Mod Chart Documentation
+# Lua Modcharts
 
 In the 1.4.2 release of Kade Engine, we introduced Mod Charts. Mod Charts are a way of changing gameplay without hard coded values. This is achieved by using the Lua Scripting language to create script files that run during runtime.
 
-All files **are located in** `assets/data/song/`
+Song data is located in `assets/data/<song>/`, so the Lua file containing your scripts should be located at exactly `assets/data/<song>/modchart.lua`. (replace <song> with the name of the song. for example, `assets/data/milf/` for milf)
 
-Modchart Lua File should be in `assets/data/song/modchart.lua` **exactly**
+If the file doesn't exist, Lua code won't be ran.
 
-Lua code will only be ran if that file exists.
-
-
-
-### Examples
+## Examples
 
 Full Example
 
 ```lua
 function start (song)
-	print("Song: " .. song .. " @ " .. bpm .. " donwscroll: " .. downscroll)
+	print("Song: " .. song .. " @ " .. bpm .. " downscroll: " .. downscroll)
 end
 
 
 function update (elapsed) -- example https://twitter.com/KadeDeveloper/status/1382178179184422918
 	local currentBeat = (songPos / 1000)*(bpm/60)
-		for i=0,7 do
-			setActorX(_G['defaultStrum'..i..'X'] + 32 * math.sin((currentBeat + i*0.25) * math.pi), i)
-			setActorY(_G['defaultStrum'..i..'Y'] + 32 * math.cos((currentBeat + i*0.25) * math.pi), i)
-		end
+	for i=0,7 do
+		setActorX(_G['defaultStrum'..i..'X'] + 32 * math.sin((currentBeat + i*0.25) * math.pi), i)
+		setActorY(_G['defaultStrum'..i..'Y'] + 32 * math.cos((currentBeat + i*0.25) * math.pi), i)
+	end
 end
 
 function beatHit (beat)
@@ -36,6 +32,10 @@ function stepHit (step)
 	-- do nothing
 end
 
+function keyPressed (key)
+	-- do nothing
+end
+
 print("Mod Chart script loaded :)")
 ```
 
@@ -43,9 +43,9 @@ Spinning Receptor Example
 
 ```lua
 function update (elapsed)
-		for i=0,7 do
-			setActorAngle(getActorAngle(i) + 15, i)
-		end
+	for i=0,7 do
+		setActorAngle(getActorAngle(i) + 15, i)
+	end
 end
 ```
 
@@ -68,11 +68,11 @@ function update (elapsed)
 			setActorY(_G['defaultStrum'..i..'Y'] + 32 * math.cos((currentBeat + i*0.25) * math.pi), i)
 		end
 	else
-        for i=0,7 do
-            setActorX(_G['defaultStrum'..i..'X'],i)
-            setActorY(_G['defaultStrum'..i..'Y'],i)
-        end
-    end
+        	for i=0,7 do
+			setActorX(_G['defaultStrum'..i..'X'],i)
+			setActorY(_G['defaultStrum'..i..'Y'],i)
+        	end
+    	end
 end
 ```
 
@@ -90,11 +90,24 @@ end
 Looping through all of the rendered notes
 
 ```lua
-	for i = 0, getRenderedNotes() do -- sets all of the rendered notes to 0 0 on the x and y axsis
-		setRenderedNotePos(0,0,i)
-	end
+for i = 0, getRenderedNotes() do -- sets all of the rendered notes to 0 0 on the x and y axsis
+	setRenderedNotePos(0,0,i)
+end
 ```
 
+Centering BF's Side
+
+```lua
+function setDefault(id)
+	_G['defaultStrum'..id..'X'] = getActorX(id)
+end
+
+-- put this somewhere in a function
+
+for i = 4, 7 do -- go to the center
+	tweenPosXAngle(i, _G['defaultStrum'..i..'X'] - 275,getActorAngle(i) + 360, 0.6, 'setDefault')
+end
+```
 
 
 ### Available Hooks
@@ -103,10 +116,11 @@ Current calls to functions include,
 
 |  Name   |   Arguments    |                         Description                          |
 | :-----: | :------------: | :----------------------------------------------------------: |
-|  start  |   Song Name    |              Get's called when the song starts               |
-| update  | Elapsed frames |       Get's called every frame (after the song starts)       |
-| stepHit |  Current Step  | Get's called when ever a step hits (steps are in between beats, aka 4 steps are in a beat) |
-| beatHit |  Current Beat  |              Get's called when ever a beat hits              |
+|  start  |   Song Name    |              Gets called when the song starts               |
+| update  | Elapsed frames |       Gets called every frame (after the song starts)       |
+| stepHit |  Current Step  | Gets called when ever a step hits (steps are in between beats, aka 4 steps are in a beat) |
+| beatHit |  Current Beat  |              Gets called when ever a beat hits              |
+| keyPressed | Key Pressed | Gets called when a key just got pressed (up, down, left, right, accept) |
 
 
 
@@ -162,13 +176,13 @@ These premade id's are the following:
 
 Creates a sprite out of the specified image, returns the id you gave it.
 
-*Note: Sprite Path is normally the FILE NAME so if you have a file name of Image it'll go to assets/data/songName/Image.png so don't include the extension*
+*Note: Sprite Path is normally the FILE NAME so if your file is named `Image` it'll go to assets/data/songName/Image.png so don't include the extension*
 
 ### Hud/Camera
 
 ##### setHudPosition(int x, int y)
 
-Set's the game hud's position in space.
+Sets the game hud's position in space.
 
 ##### getHudX()
 
@@ -182,21 +196,27 @@ Returns the hud's y position
 
 Set's the current camera's position in space
 
-##### getCamX()
+##### getCameraX()
 
 Returns the current camera's x position
 
-##### getCamY()
+##### getCameraY()
 
 Returns the current camera's y position
 
-##### setCamZoom(int zoomAmount)
+##### setCamZoom(float zoomAmount)
 
 Set's the current camera's zoom
 
-##### setHudZoom(int zoomAmount)
+##### setHudZoom(float zoomAmount)
 
 Set's the hud's zoom
+
+### Strumline
+
+##### setStrumlineY(float y)
+
+Set's the y position of the strumLine
 
 ### Actors
 
@@ -234,6 +254,12 @@ Returns the note data of an note (0-3, left, down, up, right)
 
 *Note: Rendered Notes id's are special in the way that they act. 0 = closest note to any receptor, last index = the farthest away from any receptor.*
 
+##### getRenderedNoteHit(int id)
+
+Returns whether a rendered note must be hit by the player or not
+
+*Note: Rendered Notes id's are special in the way that they act. 0 = closest note to any receptor, last index = the farthest away from any receptor.*
+
 ##### isSustain(int id)
 
 Returns whether a rendered note is a sustain note or not (if they appear as the trail)
@@ -266,7 +292,7 @@ Returns what the game would normally put the specified rendered note x.
 
 ##### anyNotes()
 
-Returns the number of rendered notes on the screen.
+Returns true if there are rendered notes, and returns false if there are none
 
 ##### getRenderedNoteStrumtime(int id)
 
@@ -366,13 +392,17 @@ Set's the angle for the sprite id
 
 Set's the scale for the sprite id
 
-##### setActorScaleX(float x, string/int id) **Currently broken**
+##### setActorScaleXY(float scaleX, float scaleY, string/int id)
 
-Set's the scale x for the sprite id
+Set's the x and y scale for the sprite id
 
-##### setActorScaleY(float y, string/int id) **Currently broken**
+##### setActorFlipX(bool flip, string/int id)
 
-Set's the scale y for the sprite id
+Set's the x flip for the sprite id
+
+##### setActorFlipY(bool flip, string/int id)
+
+Set's the y flip for the sprite id
 
 ##### getActorWidth(string/int id)
 
@@ -381,6 +411,18 @@ Returns the width for the sprite id
 ##### getActorHeight(string/int id)
 
 Returns the height for the sprite id
+
+##### changeBoyfriendCharacter(string id)
+
+Changes the Boyfriend sprite to another character
+
+##### changeDadCharacter(string id)
+
+Changes the Dad sprite to another character
+
+##### playActorAnimation(string/int id, string anim, bool force, bool reverse)
+
+Plays an animation on a sprite
 
 ### Tweens
 
@@ -409,3 +451,33 @@ Smoothly fade in to an alpha
 ##### tweenFadeOut(string/int id, float toAlpha, float time, string onComplete)
 
 Smoothly fade out to an alpha
+
+
+
+
+
+### Window & Screen
+
+##### getWindowX()
+
+Returns the window's x position
+
+##### getWindowY()
+
+Returns the window's y position
+
+##### getScreenWidth()
+
+Returns the width of the screen
+
+##### getScreenHeight()
+
+Returns the height of the screen
+
+##### setWindowPos(int x, int y)
+
+Sets the window's position
+
+##### resizeWindow(int width, int height)
+
+Resizes the window

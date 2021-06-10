@@ -1,57 +1,110 @@
 package;
 
 import Section.SwagSection;
+import Section.SwagSection;
+import Song.SwagSong;
 import Song.SwagSong;
 import WiggleEffect.WiggleEffectType;
+import WiggleEffect.WiggleEffectType;
+import flixel.FlxBasic;
 import flixel.FlxBasic;
 import flixel.FlxCamera;
+import flixel.FlxCamera;
+import flixel.FlxG;
 import flixel.FlxG;
 import flixel.FlxGame;
+import flixel.FlxGame;
+import flixel.FlxObject;
 import flixel.FlxObject;
 import flixel.FlxSprite;
+import flixel.FlxSprite;
+import flixel.FlxState;
 import flixel.FlxState;
 import flixel.FlxSubState;
+import flixel.FlxSubState;
+import flixel.addons.display.FlxGridOverlay;
 import flixel.addons.display.FlxGridOverlay;
 import flixel.addons.effects.FlxTrail;
+import flixel.addons.effects.FlxTrail;
+import flixel.addons.effects.FlxTrailArea;
 import flixel.addons.effects.FlxTrailArea;
 import flixel.addons.effects.chainable.FlxEffectSprite;
+import flixel.addons.effects.chainable.FlxEffectSprite;
+import flixel.addons.effects.chainable.FlxWaveEffect;
 import flixel.addons.effects.chainable.FlxWaveEffect;
 import flixel.addons.transition.FlxTransitionableState;
+import flixel.addons.transition.FlxTransitionableState;
+import flixel.graphics.FlxGraphic;
 import flixel.graphics.FlxGraphic;
 import flixel.graphics.atlas.FlxAtlas;
+import flixel.graphics.atlas.FlxAtlas;
+import flixel.graphics.frames.FlxAtlasFrames;
 import flixel.graphics.frames.FlxAtlasFrames;
 import flixel.group.FlxGroup.FlxTypedGroup;
+import flixel.group.FlxGroup.FlxTypedGroup;
+import flixel.input.keyboard.FlxKey;
+import flixel.math.FlxMath;
 import flixel.math.FlxMath;
 import flixel.math.FlxPoint;
+import flixel.math.FlxPoint;
+import flixel.math.FlxRect;
 import flixel.math.FlxRect;
 import flixel.system.FlxAssets;
+import flixel.system.FlxAssets;
+import flixel.system.FlxSound;
 import flixel.system.FlxSound;
 import flixel.text.FlxText;
+import flixel.text.FlxText;
+import flixel.tweens.FlxEase;
 import flixel.tweens.FlxEase;
 import flixel.tweens.FlxTween;
+import flixel.tweens.FlxTween;
+import flixel.ui.FlxBar;
 import flixel.ui.FlxBar;
 import flixel.util.FlxCollision;
+import flixel.util.FlxCollision;
+import flixel.util.FlxColor;
 import flixel.util.FlxColor;
 import flixel.util.FlxSort;
+import flixel.util.FlxSort;
+import flixel.util.FlxStringUtil;
 import flixel.util.FlxStringUtil;
 import flixel.util.FlxTimer;
+import flixel.util.FlxTimer;
+import haxe.Exception;
 import haxe.Exception;
 import haxe.Json;
+import haxe.Json;
+import lime.app.Application;
 import lime.app.Application;
 import lime.graphics.Image;
+import lime.graphics.Image;
+import lime.media.AudioContext;
 import lime.media.AudioContext;
 import lime.media.AudioManager;
+import lime.media.AudioManager;
+import lime.utils.Assets;
 import lime.utils.Assets;
 import openfl.Lib;
+import openfl.Lib;
+import openfl.display.BitmapData;
 import openfl.display.BitmapData;
 import openfl.display.BlendMode;
+import openfl.display.BlendMode;
+import openfl.display.StageQuality;
 import openfl.display.StageQuality;
 import openfl.filters.ShaderFilter;
+import openfl.filters.ShaderFilter;
+import openfl.geom.Matrix;
 import openfl.geom.Matrix;
 import openfl.utils.AssetLibrary;
+import openfl.utils.AssetLibrary;
+import openfl.utils.AssetManifest;
 import openfl.utils.AssetManifest;
 import openfl.utils.AssetType;
+import openfl.utils.AssetType;
 
+using StringTools;
 using StringTools;
 
 #if windows
@@ -1002,7 +1055,14 @@ class PlayState extends MusicBeatState
 
 		// startCountdown();
 
+		if (SONG.song == null)
+			trace('song is null???');
+		else
+			trace('song looks gucci');
+
 		generateSong(SONG.song);
+
+		trace('generated');
 
 		// add(strumLine);
 
@@ -2163,20 +2223,24 @@ class PlayState extends MusicBeatState
 		}
 		#end
 
-		if (currentFrames == FlxG.save.data.fpsCap)
+		// reverse iterate to remove oldest notes first and not invalidate the iteration
+		// stop iteration as soon as a note is not removed
+		// all notes should be kept in the correct order and this is optimal, safe to do every frame/update
 		{
-			for (i in 0...notesHitArray.length)
+			var balls = notesHitArray.length - 1;
+			while (balls >= 0)
 			{
-				var cock:Date = notesHitArray[i];
-				if (cock != null)
-					if (cock.getTime() + 2000 < Date.now().getTime())
-						notesHitArray.remove(cock);
+				var cock:Date = notesHitArray[balls];
+				if (cock != null && cock.getTime() + 1000 < Date.now().getTime())
+					notesHitArray.remove(cock);
+				else
+					balls = 0;
+				balls--;
 			}
-			nps = Math.floor(notesHitArray.length / 2);
-			currentFrames = 0;
+			nps = notesHitArray.length;
+			if (nps > maxNPS)
+				maxNPS = nps;
 		}
-		else
-			currentFrames++;
 
 		if (FlxG.keys.justPressed.NINE)
 		{
@@ -2634,10 +2698,24 @@ class PlayState extends MusicBeatState
 							else
 								daNote.y += daNote.height / 2;
 
-							if ((!daNote.mustPress || daNote.wasGoodHit || daNote.prevNote.wasGoodHit && !daNote.canBeHit)
-								&& daNote.y - daNote.offset.y * daNote.scale.y + daNote.height >= (strumLine.y + Note.swagWidth / 2))
+							// If not in botplay, only clip sustain notes when properly hit, botplay gets to clip it everytime
+							if (!FlxG.save.data.botplay)
 							{
-								// Clip to strumline
+								if ((!daNote.mustPress || daNote.wasGoodHit || daNote.prevNote.wasGoodHit && !daNote.canBeHit)
+									&& daNote.y - daNote.offset.y * daNote.scale.y + daNote.height >= (strumLine.y + Note.swagWidth / 2))
+								{
+									// Clip to strumline
+									var swagRect = new FlxRect(0, 0, daNote.frameWidth * 2, daNote.frameHeight * 2);
+									swagRect.height = (strumLineNotes.members[Math.floor(Math.abs(daNote.noteData))].y
+										+ Note.swagWidth / 2
+										- daNote.y) / daNote.scale.y;
+									swagRect.y = daNote.frameHeight - swagRect.height;
+
+									daNote.clipRect = swagRect;
+								}
+							}
+							else
+							{
 								var swagRect = new FlxRect(0, 0, daNote.frameWidth * 2, daNote.frameHeight * 2);
 								swagRect.height = (strumLineNotes.members[Math.floor(Math.abs(daNote.noteData))].y
 									+ Note.swagWidth / 2
@@ -2662,10 +2740,23 @@ class PlayState extends MusicBeatState
 						{
 							daNote.y -= daNote.height / 2;
 
-							if ((!daNote.mustPress || daNote.wasGoodHit || daNote.prevNote.wasGoodHit && !daNote.canBeHit)
-								&& daNote.y + daNote.offset.y * daNote.scale.y <= (strumLine.y + Note.swagWidth / 2))
+							if (!FlxG.save.data.botplay)
 							{
-								// Clip to strumline
+								if ((!daNote.mustPress || daNote.wasGoodHit || daNote.prevNote.wasGoodHit && !daNote.canBeHit)
+									&& daNote.y + daNote.offset.y * daNote.scale.y <= (strumLine.y + Note.swagWidth / 2))
+								{
+									// Clip to strumline
+									var swagRect = new FlxRect(0, 0, daNote.width / daNote.scale.x, daNote.height / daNote.scale.y);
+									swagRect.y = (strumLineNotes.members[Math.floor(Math.abs(daNote.noteData))].y
+										+ Note.swagWidth / 2
+										- daNote.y) / daNote.scale.y;
+									swagRect.height -= swagRect.y;
+
+									daNote.clipRect = swagRect;
+								}
+							}
+							else
+							{
 								var swagRect = new FlxRect(0, 0, daNote.width / daNote.scale.x, daNote.height / daNote.scale.y);
 								swagRect.y = (strumLineNotes.members[Math.floor(Math.abs(daNote.noteData))].y
 									+ Note.swagWidth / 2
@@ -2701,6 +2792,25 @@ class PlayState extends MusicBeatState
 							dad.playAnim('singDOWN' + altAnim, true);
 						case 0:
 							dad.playAnim('singLEFT' + altAnim, true);
+					}
+
+					if (FlxG.save.data.cpuStrums)
+					{
+						cpuStrums.forEach(function(spr:FlxSprite)
+						{
+							if (Math.abs(daNote.noteData) == spr.ID)
+							{
+								spr.animation.play('confirm', true);
+							}
+							if (spr.animation.curAnim.name == 'confirm' && !curStage.startsWith('school'))
+							{
+								spr.centerOffsets();
+								spr.offset.x -= 13;
+								spr.offset.y -= 13;
+							}
+							else
+								spr.centerOffsets();
+						});
 					}
 
 					#if windows
@@ -2751,7 +2861,6 @@ class PlayState extends MusicBeatState
 					{
 						daNote.kill();
 						notes.remove(daNote, true);
-						daNote.destroy();
 					}
 					else
 					{
@@ -2761,12 +2870,21 @@ class PlayState extends MusicBeatState
 							noteMiss(daNote.noteData, daNote);
 					}
 
-					daNote.active = false;
 					daNote.visible = false;
-
 					daNote.kill();
 					notes.remove(daNote, true);
-					daNote.destroy();
+				}
+			});
+		}
+
+		if (FlxG.save.data.cpuStrums)
+		{
+			cpuStrums.forEach(function(spr:FlxSprite)
+			{
+				if (spr.animation.finished)
+				{
+					spr.animation.play('static');
+					spr.centerOffsets();
 				}
 			});
 		}
