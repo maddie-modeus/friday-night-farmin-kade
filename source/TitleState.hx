@@ -24,15 +24,14 @@ import io.newgrounds.NG;
 import lime.app.Application;
 import openfl.Assets;
 
+using StringTools;
+
 #if windows
 import Discord.DiscordClient;
 #end
-
 #if cpp
 import sys.thread.Thread;
 #end
-
-using StringTools;
 
 class TitleState extends MusicBeatState
 {
@@ -43,6 +42,7 @@ class TitleState extends MusicBeatState
 	var credTextShit:Alphabet;
 	var textGroup:FlxGroup;
 	var ngSpr:FlxSprite;
+	var devSpr:FlxSprite;
 
 	var curWacky:Array<String> = [];
 
@@ -53,7 +53,7 @@ class TitleState extends MusicBeatState
 		#if polymod
 		polymod.Polymod.init({modRoot: "mods", dirs: ['introMod']});
 		#end
-		
+
 		#if sys
 		if (!sys.FileSystem.exists(Sys.getCwd() + "/assets/replays"))
 			sys.FileSystem.createDirectory(Sys.getCwd() + "/assets/replays");
@@ -63,16 +63,16 @@ class TitleState extends MusicBeatState
 		{
 			trace("Loaded " + openfl.Assets.getLibrary("default").assetsLoaded + " assets (DEFAULT)");
 		}
-		
+
 		PlayerSettings.init();
 
 		#if windows
 		DiscordClient.initialize();
 
-		Application.current.onExit.add (function (exitCode) {
+		Application.current.onExit.add(function(exitCode)
+		{
 			DiscordClient.shutdown();
-		 });
-		 
+		});
 		#end
 
 		curWacky = FlxG.random.getObject(getIntroTextShit());
@@ -172,7 +172,7 @@ class TitleState extends MusicBeatState
 		// logoBl.screenCenter();
 		// logoBl.color = FlxColor.BLACK;
 
-		gfDance = new FlxSprite(FlxG.width * 0.4, FlxG.height * 0.07);
+		gfDance = new FlxSprite(FlxG.width * 0.4, (FlxG.height * 0.005) - 35);
 		gfDance.frames = Paths.getSparrowAtlas('gfDanceTitle');
 		gfDance.animation.addByIndices('danceLeft', 'gfDance', [30, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14], "", 24, false);
 		gfDance.animation.addByIndices('danceRight', 'gfDance', [15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29], "", 24, false);
@@ -212,13 +212,21 @@ class TitleState extends MusicBeatState
 
 		credTextShit.visible = false;
 
-		ngSpr = new FlxSprite(0, FlxG.height * 0.52).loadGraphic(Paths.image('newgrounds_logo'));
-		add(ngSpr);
-		ngSpr.visible = false;
-		ngSpr.setGraphicSize(Std.int(ngSpr.width * 0.8));
-		ngSpr.updateHitbox();
-		ngSpr.screenCenter(X);
-		ngSpr.antialiasing = true;
+		// ngSpr = new FlxSprite(0, FlxG.height * 0.52).loadGraphic(Paths.image('newgrounds_logo'));
+		// add(ngSpr);
+		// ngSpr.visible = false;
+		// ngSpr.setGraphicSize(Std.int(ngSpr.width * 0.8));
+		// ngSpr.updateHitbox();
+		// ngSpr.screenCenter(X);
+		// ngSpr.antialiasing = true;
+
+		devSpr = new FlxSprite(0, FlxG.height * 0.37).loadGraphic(Paths.image('dev_bois'));
+		add(devSpr);
+		devSpr.visible = false;
+		devSpr.setGraphicSize(Std.int(devSpr.width * 1.3));
+		devSpr.updateHitbox();
+		devSpr.screenCenter(X);
+		devSpr.antialiasing = true;
 
 		FlxTween.tween(credTextShit, {y: credTextShit.y + 20}, 2.9, {ease: FlxEase.quadInOut, type: PINGPONG});
 
@@ -305,14 +313,13 @@ class TitleState extends MusicBeatState
 
 			new FlxTimer().start(2, function(tmr:FlxTimer)
 			{
-
 				// Get current version of Kade Engine
 
 				var http = new haxe.Http("https://raw.githubusercontent.com/KadeDev/Kade-Engine/master/version.downloadMe");
 
-				http.onData = function (data:String) {
-				  
-				  	if (!MainMenuState.kadeEngineVer.contains(data.trim()) && !OutdatedSubState.leftState && MainMenuState.nightly == "")
+				http.onData = function(data:String)
+				{
+					if (!MainMenuState.kadeEngineVer.contains(data.trim()) && !OutdatedSubState.leftState && MainMenuState.nightly == "")
 					{
 						trace('outdated lmao! ' + data.trim() + ' != ' + MainMenuState.kadeEngineVer);
 						OutdatedSubState.needVer = data;
@@ -323,14 +330,14 @@ class TitleState extends MusicBeatState
 						FlxG.switchState(new MainMenuState());
 					}
 				}
-				
-				http.onError = function (error) {
-				  trace('error: $error');
-				  FlxG.switchState(new MainMenuState()); // fail but we go anyway
-				}
-				
-				http.request();
 
+				http.onError = function(error)
+				{
+					trace('error: $error');
+					FlxG.switchState(new MainMenuState()); // fail but we go anyway
+				}
+
+				http.request();
 			});
 			// FlxG.sound.play(Paths.music('titleShoot'), 0.7);
 		}
@@ -389,21 +396,23 @@ class TitleState extends MusicBeatState
 
 		switch (curBeat)
 		{
-			case 1:
-				createCoolText(['ninjamuffin99', 'phantomArcade', 'kawaisprite', 'evilsk8er']);
+			case 2:
+				// createCoolText(['ninjamuffin99', 'phantomArcade', 'kawaisprite', 'evilsk8er']);
+				createCoolText(['epic dev team']);
 			// credTextShit.visible = true;
 			case 3:
-				addMoreText('present');
+				devSpr.visible = true;
 			// credTextShit.text += '\npresent...';
 			// credTextShit.addText();
 			case 4:
+				devSpr.visible = false;
 				deleteCoolText();
 			// credTextShit.visible = false;
 			// credTextShit.text = 'In association \nwith';
 			// credTextShit.screenCenter();
 			case 5:
 				if (Main.watermarks)
-					createCoolText(['Kade Engine', 'by']);
+					createCoolText(['using Kade Engine', 'by']);
 				else
 					createCoolText(['In Partnership', 'with']);
 			case 7:
@@ -417,7 +426,7 @@ class TitleState extends MusicBeatState
 			// credTextShit.text += '\nNewgrounds';
 			case 8:
 				deleteCoolText();
-				ngSpr.visible = false;
+
 			// credTextShit.visible = false;
 
 			// credTextShit.text = 'Shoutouts Tom Fulp';
@@ -440,7 +449,7 @@ class TitleState extends MusicBeatState
 				addMoreText('Night');
 			// credTextShit.text += '\nNight';
 			case 15:
-				addMoreText('Funkin'); // credTextShit.text += '\nFunkin';
+				addMoreText('Farmin'); // credTextShit.text += '\nFunkin';
 
 			case 16:
 				skipIntro();

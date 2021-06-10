@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="vegeBoppers_carotene.png">
+	<!-- Created with Adobe Animate version 21.0.5.40714 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="vegeBoppers_carotene0000" x="0" y="0" width="3237" height="2186" pivotX="223.8" pivotY="432.35" frameX="-6" frameY="0" frameWidth="3243" frameHeight="2186"/>
+	<SubTexture name="vegeBoppers_carotene0001" x="0" y="0" width="3237" height="2186" frameX="-6" frameY="0" frameWidth="3243" frameHeight="2186"/>
+	<SubTexture name="vegeBoppers_carotene0002" x="3237" y="0" width="3239" height="2186" frameX="-4" frameY="0" frameWidth="3243" frameHeight="2186"/>
+	<SubTexture name="vegeBoppers_carotene0003" x="3237" y="0" width="3239" height="2186" frameX="-4" frameY="0" frameWidth="3243" frameHeight="2186"/>
+	<SubTexture name="vegeBoppers_carotene0004" x="0" y="2186" width="3242" height="2186" frameX="-1" frameY="0" frameWidth="3243" frameHeight="2186"/>
+	<SubTexture name="vegeBoppers_carotene0005" x="0" y="2186" width="3242" height="2186" frameX="-1" frameY="0" frameWidth="3243" frameHeight="2186"/>
+	<SubTexture name="vegeBoppers_carotene0006" x="3242" y="2186" width="3243" height="2186"/>
+	<SubTexture name="vegeBoppers_carotene0007" x="3242" y="2186" width="3243" height="2186"/>
+	<SubTexture name="vegeBoppers_carotene0008" x="3242" y="2186" width="3243" height="2186"/>
+	<SubTexture name="vegeBoppers_carotene0009" x="3242" y="2186" width="3243" height="2186"/>
+	<SubTexture name="vegeBoppers_carotene0010" x="3242" y="2186" width="3243" height="2186"/>
+	<SubTexture name="vegeBoppers_carotene0011" x="3242" y="2186" width="3243" height="2186"/>
+	<SubTexture name="vegeBoppers_carotene0012" x="3242" y="2186" width="3243" height="2186"/>
+	<SubTexture name="vegeBoppers_carotene0013" x="3242" y="2186" width="3243" height="2186"/>
+</TextureAtlas>

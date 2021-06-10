@@ -13,11 +13,11 @@ import flixel.util.FlxColor;
 import flixel.util.FlxTimer;
 import lime.net.curl.CURLCode;
 
+using StringTools;
+
 #if windows
 import Discord.DiscordClient;
 #end
-
-using StringTools;
 
 class StoryMenuState extends MusicBeatState
 {
@@ -25,35 +25,40 @@ class StoryMenuState extends MusicBeatState
 
 	var weekData:Array<Dynamic> = [
 		['Tutorial'],
-		['Bopeebo', 'Fresh', 'Dadbattle'],
-		['Spookeez', 'South', "Monster"],
-		['Pico', 'Philly', "Blammed"],
-		['Satin-Panties', "High", "Milf"],
-		['Cocoa', 'Eggnog', 'Winter-Horrorland'],
-		['Senpai', 'Roses', 'Thorns']
+		// ['Bopeebo', 'Fresh', 'Dadbattle'],
+		// ['Spookeez', 'South', "Monster"],
+		// ['Pico', 'Philly', "Blammed"],
+		// ['Satin-Panties', "High", "Milf"],
+		// ['Cocoa', 'Eggnog', 'Winter-Horrorland'],
+		// ['Senpai', 'Roses', 'Thorns'],
+		['Daisy-Dukes', 'Squaredance', 'Carotene'] // ['Carotene', 'Daisy-Dukes']
+		// ['Carotene', 'Squaredance', 'Daisy-Dukes']
 	];
 	var curDifficulty:Int = 1;
 
-	public static var weekUnlocked:Array<Bool> = [true, true, true, true, true, true, true];
+	// public static var weekUnlocked:Array<Bool> = [true, true, true, true, true, true, true, true];
+	public static var weekUnlocked:Array<Bool> = [true, true];
 
 	var weekCharacters:Array<Dynamic> = [
 		['', 'bf', 'gf'],
-		['dad', 'bf', 'gf'],
-		['spooky', 'bf', 'gf'],
-		['pico', 'bf', 'gf'],
-		['mom', 'bf', 'gf'],
-		['parents-christmas', 'bf', 'gf'],
-		['senpai', 'bf', 'gf']
+		// ['dad', 'bf', 'gf'],
+		// ['spooky', 'bf', 'gf'],
+		// ['pico', 'bf', 'gf'],
+		// ['mom', 'bf', 'gf'],
+		// ['parents-christmas', 'bf', 'gf'],
+		// ['senpai', 'bf', 'gf'],
+		['katrine', 'bf', 'gf']
 	];
 
 	var weekNames:Array<String> = [
 		"How to Funk",
-		"Daddy Dearest",
+		"CITYBOY VS COUNTRY FUNKIN",
 		"Spooky Month",
 		"PICO",
 		"MOMMY MUST MURDER",
 		"RED SNOW",
-		"Hating Simulator ft. Moawling"
+		"Hating Simulator ft. Moawling",
+		"CITYBOY VS COUNTRY FUNKIN"
 	];
 
 	var txtWeekTitle:FlxText;
@@ -386,7 +391,7 @@ class StoryMenuState extends MusicBeatState
 		{
 			txtTracklist.text += "\n" + i;
 		}
-
+		txtTracklist.text += "\n";
 		txtTracklist.text = txtTracklist.text.toUpperCase();
 
 		txtTracklist.screenCenter(X);

@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="katrinePortraitEnter.png">
+	<!-- Created with Adobe Animate version 21.0.5.40714 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="katrinePortraitEnter0000" x="0" y="0" width="443" height="656" pivotX="361.25" pivotY="-10.45" frameX="0" frameY="0" frameWidth="504" frameHeight="656"/>
+	<SubTexture name="katrinePortraitEnter0001" x="443" y="0" width="443" height="656" frameX="-36" frameY="0" frameWidth="504" frameHeight="656"/>
+	<SubTexture name="katrinePortraitEnter0002" x="443" y="0" width="443" height="656" frameX="-36" frameY="0" frameWidth="504" frameHeight="656"/>
+	<SubTexture name="katrinePortraitEnter0003" x="886" y="0" width="443" height="656" frameX="-54" frameY="0" frameWidth="504" frameHeight="656"/>
+	<SubTexture name="katrinePortraitEnter0004" x="886" y="0" width="443" height="656" frameX="-54" frameY="0" frameWidth="504" frameHeight="656"/>
+	<SubTexture name="katrinePortraitEnter0005" x="1329" y="0" width="443" height="656" frameX="-61" frameY="0" frameWidth="504" frameHeight="656"/>
+	<SubTexture name="katrinePortraitEnter0006" x="1329" y="0" width="443" height="656" frameX="-61" frameY="0" frameWidth="504" frameHeight="656"/>
+	<SubTexture name="katrinePortraitEnter0007" x="1329" y="0" width="443" height="656" frameX="-61" frameY="0" frameWidth="504" frameHeight="656"/>
+</TextureAtlas>
