@@ -390,14 +390,16 @@ class StoryMenuState extends MusicBeatState
 
 		for (i in stringThing)
 			txtTracklist.text += "\n" + i;
+
+		txtTracklist.text = txtTracklist.text.toUpperCase();
+
+		txtTracklist.screenCenter(X);
+		txtTracklist.x -= FlxG.width * 0.35;
+
+		txtTracklist.text += "\n";
+
+		#if !switch
+		intendedScore = Highscore.getWeekScore(curWeek, curDifficulty);
+		#end
 	}
-	txtTracklist.text += "\n";
-	txtTracklist.text = txtTracklist.text.toUpperCase();
-	txtTracklist.screenCenter(X);
-	txtTracklist.x -= FlxG.width * 0.35;
-	txtTracklist.text += "\n";
-	#if !switch
-	intendedScore = Highscore.getWeekScore(curWeek, curDifficulty);
-	#end
-}
 }
