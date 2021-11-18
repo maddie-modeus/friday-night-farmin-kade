@@ -2,6 +2,10 @@ Tutorial:gf:1
 Daisy-Dukes:katrine:7
 Squaredance:katrine-hat:7
 Carotene:katrine-mobility:7
+Bodyslam:beth:7
+Tremors:tony:7
+Pompous:jacqui:7
+
 
 
 

@@ -1,0 +1,121 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="GF_assets_katrinemode_tremors.png">
+	<!-- Created with Adobe Animate version 21.0.5.40714 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="Katrine Dancing Beat 0000" x="4202" y="1667" width="699" height="795" pivotX="149.4" pivotY="481" frameX="-2" frameY="-25" frameWidth="703" frameHeight="820"/>
+	<SubTexture name="Katrine Dancing Beat 0001" x="4901" y="1667" width="703" height="795" frameX="0" frameY="-25" frameWidth="703" frameHeight="820"/>
+	<SubTexture name="Katrine Dancing Beat 0002" x="5604" y="1667" width="703" height="794" frameX="0" frameY="-26" frameWidth="703" frameHeight="820"/>
+	<SubTexture name="Katrine Dancing Beat 0003" x="6307" y="1667" width="699" height="794" frameX="-2" frameY="-26" frameWidth="703" frameHeight="820"/>
+	<SubTexture name="Katrine Dancing Beat 0004" x="7006" y="1667" width="699" height="799" frameX="-2" frameY="-21" frameWidth="703" frameHeight="820"/>
+	<SubTexture name="Katrine Dancing Beat 0005" x="0" y="2509" width="699" height="799" frameX="-2" frameY="-21" frameWidth="703" frameHeight="820"/>
+	<SubTexture name="Katrine Dancing Beat 0006" x="699" y="2509" width="699" height="802" frameX="-2" frameY="-18" frameWidth="703" frameHeight="820"/>
+	<SubTexture name="Katrine Dancing Beat 0007" x="1398" y="2509" width="699" height="817" frameX="-2" frameY="-3" frameWidth="703" frameHeight="820"/>
+	<SubTexture name="Katrine Dancing Beat 0008" x="1398" y="2509" width="699" height="817" frameX="-2" frameY="-3" frameWidth="703" frameHeight="820"/>
+	<SubTexture name="Katrine Dancing Beat 0009" x="1398" y="2509" width="699" height="817" frameX="-2" frameY="-3" frameWidth="703" frameHeight="820"/>
+	<SubTexture name="Katrine Dancing Beat 0010" x="2097" y="2509" width="699" height="820" frameX="-2" frameY="0" frameWidth="703" frameHeight="820"/>
+	<SubTexture name="Katrine Dancing Beat 0011" x="2097" y="2509" width="699" height="820" frameX="-2" frameY="0" frameWidth="703" frameHeight="820"/>
+	<SubTexture name="Katrine Dancing Beat 0012" x="2097" y="2509" width="699" height="820" frameX="-2" frameY="0" frameWidth="703" frameHeight="820"/>
+	<SubTexture name="Katrine Dancing Beat 0013" x="2796" y="2509" width="699" height="819" frameX="-2" frameY="-1" frameWidth="703" frameHeight="820"/>
+	<SubTexture name="Katrine Dancing Beat 0014" x="2796" y="2509" width="699" height="819" frameX="-2" frameY="-1" frameWidth="703" frameHeight="820"/>
+	<SubTexture name="Katrine Dancing Beat 0015" x="3495" y="2509" width="699" height="810" frameX="-2" frameY="-10" frameWidth="703" frameHeight="820"/>
+	<SubTexture name="Katrine Dancing Beat 0016" x="4194" y="2509" width="703" height="810" frameX="0" frameY="-10" frameWidth="703" frameHeight="820"/>
+	<SubTexture name="Katrine Dancing Beat 0017" x="4897" y="2509" width="703" height="810" frameX="0" frameY="-10" frameWidth="703" frameHeight="820"/>
+	<SubTexture name="Katrine Dancing Beat 0018" x="5600" y="2509" width="699" height="810" frameX="-2" frameY="-10" frameWidth="703" frameHeight="820"/>
+	<SubTexture name="Katrine Dancing Beat 0019" x="6299" y="2509" width="699" height="813" frameX="-2" frameY="-7" frameWidth="703" frameHeight="820"/>
+	<SubTexture name="Katrine Dancing Beat 0020" x="6998" y="2509" width="699" height="813" frameX="-2" frameY="-7" frameWidth="703" frameHeight="820"/>
+	<SubTexture name="Katrine Dancing Beat 0021" x="0" y="3329" width="699" height="808" frameX="-2" frameY="-12" frameWidth="703" frameHeight="820"/>
+	<SubTexture name="Katrine Dancing Beat 0022" x="699" y="3329" width="699" height="811" frameX="-2" frameY="-9" frameWidth="703" frameHeight="820"/>
+	<SubTexture name="Katrine Dancing Beat 0023" x="699" y="3329" width="699" height="811" frameX="-2" frameY="-9" frameWidth="703" frameHeight="820"/>
+	<SubTexture name="Katrine Dancing Beat 0024" x="699" y="3329" width="699" height="811" frameX="-2" frameY="-9" frameWidth="703" frameHeight="820"/>
+	<SubTexture name="Katrine Dancing Beat 0025" x="1398" y="3329" width="699" height="810" frameX="-2" frameY="-10" frameWidth="703" frameHeight="820"/>
+	<SubTexture name="Katrine Dancing Beat 0026" x="1398" y="3329" width="699" height="810" frameX="-2" frameY="-10" frameWidth="703" frameHeight="820"/>
+	<SubTexture name="Katrine Dancing Beat 0027" x="1398" y="3329" width="699" height="810" frameX="-2" frameY="-10" frameWidth="703" frameHeight="820"/>
+	<SubTexture name="Katrine Dancing Beat 0028" x="2097" y="3329" width="699" height="809" frameX="-2" frameY="-11" frameWidth="703" frameHeight="820"/>
+	<SubTexture name="Katrine Dancing Beat 0029" x="2097" y="3329" width="699" height="809" frameX="-2" frameY="-11" frameWidth="703" frameHeight="820"/>
+	<SubTexture name="Katrine Fear0000" x="2796" y="3329" width="699" height="831" pivotX="147.15" pivotY="492.5"/>
+	<SubTexture name="Katrine Fear0001" x="3495" y="3329" width="699" height="827" frameX="0" frameY="-4" frameWidth="699" frameHeight="831"/>
+	<SubTexture name="Katrine Fear0002" x="4194" y="3329" width="699" height="829" frameX="0" frameY="-2" frameWidth="699" frameHeight="831"/>
+	<SubTexture name="Katrine Fear0003" x="4893" y="3329" width="699" height="828" frameX="0" frameY="-3" frameWidth="699" frameHeight="831"/>
+	<SubTexture name="Katrine GF Down0000" x="0" y="0" width="699" height="775" pivotX="149.4" pivotY="452.9" frameX="-2" frameY="-16" frameWidth="703" frameHeight="791"/>
+	<SubTexture name="Katrine GF Down0001" x="699" y="0" width="703" height="775" frameX="0" frameY="-16" frameWidth="703" frameHeight="791"/>
+	<SubTexture name="Katrine GF Down0002" x="1402" y="0" width="703" height="791"/>
+	<SubTexture name="Katrine GF Down0003" x="2105" y="0" width="699" height="791" frameX="-2" frameY="0" frameWidth="703" frameHeight="791"/>
+	<SubTexture name="Katrine GF Down0004" x="2804" y="0" width="699" height="791" frameX="-2" frameY="0" frameWidth="703" frameHeight="791"/>
+	<SubTexture name="Katrine GF Down0005" x="3503" y="0" width="699" height="791" frameX="-2" frameY="0" frameWidth="703" frameHeight="791"/>
+	<SubTexture name="Katrine GF Down0006" x="3503" y="0" width="699" height="791" frameX="-2" frameY="0" frameWidth="703" frameHeight="791"/>
+	<SubTexture name="Katrine GF Down0007" x="3503" y="0" width="699" height="791" frameX="-2" frameY="0" frameWidth="703" frameHeight="791"/>
+	<SubTexture name="Katrine GF Down0008" x="3503" y="0" width="699" height="791" frameX="-2" frameY="0" frameWidth="703" frameHeight="791"/>
+	<SubTexture name="Katrine GF Down0009" x="3503" y="0" width="699" height="791" frameX="-2" frameY="0" frameWidth="703" frameHeight="791"/>
+	<SubTexture name="Katrine GF Down0010" x="3503" y="0" width="699" height="791" frameX="-2" frameY="0" frameWidth="703" frameHeight="791"/>
+	<SubTexture name="Katrine GF Down0011" x="3503" y="0" width="699" height="791" frameX="-2" frameY="0" frameWidth="703" frameHeight="791"/>
+	<SubTexture name="Katrine GF Down0012" x="3503" y="0" width="699" height="791" frameX="-2" frameY="0" frameWidth="703" frameHeight="791"/>
+	<SubTexture name="Katrine GF Down0013" x="3503" y="0" width="699" height="791" frameX="-2" frameY="0" frameWidth="703" frameHeight="791"/>
+	<SubTexture name="Katrine GF Down0014" x="3503" y="0" width="699" height="791" frameX="-2" frameY="0" frameWidth="703" frameHeight="791"/>
+	<SubTexture name="Katrine GF Down0015" x="3503" y="0" width="699" height="791" frameX="-2" frameY="0" frameWidth="703" frameHeight="791"/>
+	<SubTexture name="Katrine GF Down0016" x="3503" y="0" width="699" height="791" frameX="-2" frameY="0" frameWidth="703" frameHeight="791"/>
+	<SubTexture name="Katrine GF Down0017" x="3503" y="0" width="699" height="791" frameX="-2" frameY="0" frameWidth="703" frameHeight="791"/>
+	<SubTexture name="Katrine GF Down0018" x="3503" y="0" width="699" height="791" frameX="-2" frameY="0" frameWidth="703" frameHeight="791"/>
+	<SubTexture name="Katrine GF Down0019" x="3503" y="0" width="699" height="791" frameX="-2" frameY="0" frameWidth="703" frameHeight="791"/>
+	<SubTexture name="Katrine GF Left0000" x="4202" y="0" width="699" height="797" pivotX="149.4" pivotY="496.1" frameX="-2" frameY="-38" frameWidth="703" frameHeight="835"/>
+	<SubTexture name="Katrine GF Left0001" x="4901" y="0" width="703" height="800" frameX="0" frameY="-35" frameWidth="703" frameHeight="835"/>
+	<SubTexture name="Katrine GF Left0002" x="5604" y="0" width="703" height="835"/>
+	<SubTexture name="Katrine GF Left0003" x="6307" y="0" width="699" height="835" frameX="-2" frameY="0" frameWidth="703" frameHeight="835"/>
+	<SubTexture name="Katrine GF Left0004" x="7006" y="0" width="699" height="831" frameX="-2" frameY="-4" frameWidth="703" frameHeight="835"/>
+	<SubTexture name="Katrine GF Left0005" x="0" y="835" width="699" height="832" frameX="-2" frameY="-3" frameWidth="703" frameHeight="835"/>
+	<SubTexture name="Katrine GF Left0006" x="699" y="835" width="699" height="830" frameX="-2" frameY="-5" frameWidth="703" frameHeight="835"/>
+	<SubTexture name="Katrine GF Left0007" x="699" y="835" width="699" height="830" frameX="-2" frameY="-5" frameWidth="703" frameHeight="835"/>
+	<SubTexture name="Katrine GF Left0008" x="1398" y="835" width="699" height="828" frameX="-2" frameY="-7" frameWidth="703" frameHeight="835"/>
+	<SubTexture name="Katrine GF Left0009" x="1398" y="835" width="699" height="828" frameX="-2" frameY="-7" frameWidth="703" frameHeight="835"/>
+	<SubTexture name="Katrine GF Left0010" x="1398" y="835" width="699" height="828" frameX="-2" frameY="-7" frameWidth="703" frameHeight="835"/>
+	<SubTexture name="Katrine GF Left0011" x="1398" y="835" width="699" height="828" frameX="-2" frameY="-7" frameWidth="703" frameHeight="835"/>
+	<SubTexture name="Katrine GF Left0012" x="1398" y="835" width="699" height="828" frameX="-2" frameY="-7" frameWidth="703" frameHeight="835"/>
+	<SubTexture name="Katrine GF Left0013" x="1398" y="835" width="699" height="828" frameX="-2" frameY="-7" frameWidth="703" frameHeight="835"/>
+	<SubTexture name="Katrine GF Left0014" x="1398" y="835" width="699" height="828" frameX="-2" frameY="-7" frameWidth="703" frameHeight="835"/>
+	<SubTexture name="Katrine GF Right0000" x="2097" y="835" width="771" height="809" pivotX="149.4" pivotY="477.95" frameX="-2" frameY="-7" frameWidth="773" frameHeight="816"/>
+	<SubTexture name="Katrine GF Right0001" x="2868" y="835" width="763" height="816" frameX="0" frameY="0" frameWidth="773" frameHeight="816"/>
+	<SubTexture name="Katrine GF Right0002" x="3631" y="835" width="741" height="814" frameX="0" frameY="-2" frameWidth="773" frameHeight="816"/>
+	<SubTexture name="Katrine GF Right0003" x="4372" y="835" width="739" height="814" frameX="-2" frameY="-2" frameWidth="773" frameHeight="816"/>
+	<SubTexture name="Katrine GF Right0004" x="5111" y="835" width="745" height="815" frameX="-2" frameY="-1" frameWidth="773" frameHeight="816"/>
+	<SubTexture name="Katrine GF Right0005" x="5856" y="835" width="745" height="816" frameX="-2" frameY="0" frameWidth="773" frameHeight="816"/>
+	<SubTexture name="Katrine GF Right0006" x="6601" y="835" width="745" height="816" frameX="-2" frameY="0" frameWidth="773" frameHeight="816"/>
+	<SubTexture name="Katrine GF Right0007" x="6601" y="835" width="745" height="816" frameX="-2" frameY="0" frameWidth="773" frameHeight="816"/>
+	<SubTexture name="Katrine GF Right0008" x="7346" y="835" width="745" height="816" frameX="-2" frameY="0" frameWidth="773" frameHeight="816"/>
+	<SubTexture name="Katrine GF Right0009" x="7346" y="835" width="745" height="816" frameX="-2" frameY="0" frameWidth="773" frameHeight="816"/>
+	<SubTexture name="Katrine GF Right0010" x="7346" y="835" width="745" height="816" frameX="-2" frameY="0" frameWidth="773" frameHeight="816"/>
+	<SubTexture name="Katrine GF Right0011" x="7346" y="835" width="745" height="816" frameX="-2" frameY="0" frameWidth="773" frameHeight="816"/>
+	<SubTexture name="Katrine GF Right0012" x="7346" y="835" width="745" height="816" frameX="-2" frameY="0" frameWidth="773" frameHeight="816"/>
+	<SubTexture name="Katrine GF Right0013" x="7346" y="835" width="745" height="816" frameX="-2" frameY="0" frameWidth="773" frameHeight="816"/>
+	<SubTexture name="Katrine GF Right0014" x="7346" y="835" width="745" height="816" frameX="-2" frameY="0" frameWidth="773" frameHeight="816"/>
+	<SubTexture name="Katrine GF Up0000" x="0" y="1667" width="699" height="842" pivotX="149.4" pivotY="503.3" frameX="-2" frameY="0" frameWidth="703" frameHeight="842"/>
+	<SubTexture name="Katrine GF Up0001" x="699" y="1667" width="703" height="842"/>
+	<SubTexture name="Katrine GF Up0002" x="1402" y="1667" width="703" height="825" frameX="0" frameY="-17" frameWidth="703" frameHeight="842"/>
+	<SubTexture name="Katrine GF Up0003" x="2105" y="1667" width="699" height="825" frameX="-2" frameY="-17" frameWidth="703" frameHeight="842"/>
+	<SubTexture name="Katrine GF Up0004" x="2804" y="1667" width="699" height="825" frameX="-2" frameY="-17" frameWidth="703" frameHeight="842"/>
+	<SubTexture name="Katrine GF Up0005" x="3503" y="1667" width="699" height="829" frameX="-2" frameY="-13" frameWidth="703" frameHeight="842"/>
+	<SubTexture name="Katrine GF Up0006" x="3503" y="1667" width="699" height="829" frameX="-2" frameY="-13" frameWidth="703" frameHeight="842"/>
+	<SubTexture name="Katrine GF Up0007" x="3503" y="1667" width="699" height="829" frameX="-2" frameY="-13" frameWidth="703" frameHeight="842"/>
+	<SubTexture name="Katrine GF Up0008" x="3503" y="1667" width="699" height="829" frameX="-2" frameY="-13" frameWidth="703" frameHeight="842"/>
+	<SubTexture name="Katrine GF Up0009" x="3503" y="1667" width="699" height="829" frameX="-2" frameY="-13" frameWidth="703" frameHeight="842"/>
+	<SubTexture name="Katrine GF Up0010" x="3503" y="1667" width="699" height="829" frameX="-2" frameY="-13" frameWidth="703" frameHeight="842"/>
+	<SubTexture name="Katrine GF Up0011" x="3503" y="1667" width="699" height="829" frameX="-2" frameY="-13" frameWidth="703" frameHeight="842"/>
+	<SubTexture name="Katrine GF Up0012" x="3503" y="1667" width="699" height="829" frameX="-2" frameY="-13" frameWidth="703" frameHeight="842"/>
+	<SubTexture name="Katrine GF Up0013" x="3503" y="1667" width="699" height="829" frameX="-2" frameY="-13" frameWidth="703" frameHeight="842"/>
+	<SubTexture name="Katrine GF Up0014" x="3503" y="1667" width="699" height="829" frameX="-2" frameY="-13" frameWidth="703" frameHeight="842"/>
+	<SubTexture name="Katrine GF Up0015" x="3503" y="1667" width="699" height="829" frameX="-2" frameY="-13" frameWidth="703" frameHeight="842"/>
+	<SubTexture name="Katrine GF Up0016" x="3503" y="1667" width="699" height="829" frameX="-2" frameY="-13" frameWidth="703" frameHeight="842"/>
+	<SubTexture name="Katrine GF Up0017" x="3503" y="1667" width="699" height="829" frameX="-2" frameY="-13" frameWidth="703" frameHeight="842"/>
+	<SubTexture name="Katrine GF Up0018" x="3503" y="1667" width="699" height="829" frameX="-2" frameY="-13" frameWidth="703" frameHeight="842"/>
+	<SubTexture name="Katrine GF Up0019" x="3503" y="1667" width="699" height="829" frameX="-2" frameY="-13" frameWidth="703" frameHeight="842"/>
+	<SubTexture name="katrineMiss0000" x="5592" y="3329" width="699" height="814" pivotX="198.15" pivotY="171" frameX="0" frameY="-11" frameWidth="699" frameHeight="825"/>
+	<SubTexture name="katrineMiss0001" x="6291" y="3329" width="699" height="814" frameX="0" frameY="-11" frameWidth="699" frameHeight="825"/>
+	<SubTexture name="katrineMiss0002" x="6990" y="3329" width="699" height="825"/>
+	<SubTexture name="katrineMiss0003" x="0" y="4160" width="699" height="825"/>
+	<SubTexture name="katrineMiss0004" x="699" y="4160" width="699" height="818" frameX="0" frameY="-7" frameWidth="699" frameHeight="825"/>
+	<SubTexture name="katrineMiss0005" x="1398" y="4160" width="699" height="818" frameX="0" frameY="-7" frameWidth="699" frameHeight="825"/>
+	<SubTexture name="katrineMiss0006" x="2097" y="4160" width="699" height="818" frameX="0" frameY="-7" frameWidth="699" frameHeight="825"/>
+	<SubTexture name="katrineMiss0007" x="2796" y="4160" width="699" height="818" frameX="0" frameY="-7" frameWidth="699" frameHeight="825"/>
+	<SubTexture name="katrineMiss0008" x="3495" y="4160" width="699" height="818" frameX="0" frameY="-7" frameWidth="699" frameHeight="825"/>
+	<SubTexture name="katrineMiss0009" x="4194" y="4160" width="699" height="818" frameX="0" frameY="-7" frameWidth="699" frameHeight="825"/>
+	<SubTexture name="katrineMiss0010" x="4893" y="4160" width="699" height="818" frameX="0" frameY="-7" frameWidth="699" frameHeight="825"/>
+	<SubTexture name="katrineMiss0011" x="4893" y="4160" width="699" height="818" frameX="0" frameY="-7" frameWidth="699" frameHeight="825"/>
+</TextureAtlas>

@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="vegeBoppers_halloween.png">
+	<!-- Created with Adobe Animate version 21.0.5.40714 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="vegeBoppers_pompous0000" x="0" y="0" width="3234" height="1665" pivotX="182.15" pivotY="608.1" frameX="0" frameY="-26" frameWidth="3234" frameHeight="1691"/>
+	<SubTexture name="vegeBoppers_pompous0001" x="0" y="0" width="3234" height="1665" frameX="0" frameY="-26" frameWidth="3234" frameHeight="1691"/>
+	<SubTexture name="vegeBoppers_pompous0002" x="3234" y="0" width="3211" height="1678" frameX="-6" frameY="-13" frameWidth="3234" frameHeight="1691"/>
+	<SubTexture name="vegeBoppers_pompous0003" x="3234" y="0" width="3211" height="1678" frameX="-6" frameY="-13" frameWidth="3234" frameHeight="1691"/>
+	<SubTexture name="vegeBoppers_pompous0004" x="0" y="1678" width="3202" height="1683" frameX="-6" frameY="-8" frameWidth="3234" frameHeight="1691"/>
+	<SubTexture name="vegeBoppers_pompous0005" x="0" y="1678" width="3202" height="1683" frameX="-6" frameY="-8" frameWidth="3234" frameHeight="1691"/>
+	<SubTexture name="vegeBoppers_pompous0006" x="3202" y="1678" width="3193" height="1691" frameX="-6" frameY="0" frameWidth="3234" frameHeight="1691"/>
+	<SubTexture name="vegeBoppers_pompous0007" x="3202" y="1678" width="3193" height="1691" frameX="-6" frameY="0" frameWidth="3234" frameHeight="1691"/>
+	<SubTexture name="vegeBoppers_pompous0008" x="3202" y="1678" width="3193" height="1691" frameX="-6" frameY="0" frameWidth="3234" frameHeight="1691"/>
+	<SubTexture name="vegeBoppers_pompous0009" x="3202" y="1678" width="3193" height="1691" frameX="-6" frameY="0" frameWidth="3234" frameHeight="1691"/>
+	<SubTexture name="vegeBoppers_pompous0010" x="3202" y="1678" width="3193" height="1691" frameX="-6" frameY="0" frameWidth="3234" frameHeight="1691"/>
+	<SubTexture name="vegeBoppers_pompous0011" x="3202" y="1678" width="3193" height="1691" frameX="-6" frameY="0" frameWidth="3234" frameHeight="1691"/>
+	<SubTexture name="vegeBoppers_pompous0012" x="3202" y="1678" width="3193" height="1691" frameX="-6" frameY="0" frameWidth="3234" frameHeight="1691"/>
+	<SubTexture name="vegeBoppers_pompous0013" x="3202" y="1678" width="3193" height="1691" frameX="-6" frameY="0" frameWidth="3234" frameHeight="1691"/>
+</TextureAtlas>

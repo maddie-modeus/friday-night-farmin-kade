@@ -108,7 +108,7 @@ class Character extends FlxSprite
 				animation.addByIndices('hairFall', "GF Dancing Beat Hair Landing", [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11], "", 24, false);
 				animation.addByPrefix('scared', 'GF FEAR', 24);
 
-				addOffset('cheer');
+				addOffset('cheer', 0, 85);
 				// addOffset('sad', -2, -2);
 				// addOffset('danceLeft', 0, -9);
 				// addOffset('danceRight', 0, -9);
@@ -127,6 +127,84 @@ class Character extends FlxSprite
 				addOffset('scared', -2, 77);
 
 				playAnim('danceRight');
+
+			case 'gf-bodyslam':
+				tex = Paths.getSparrowAtlas('characters/GF_assets_katrinemode_bodyslam');
+				frames = tex;
+				animation.addByPrefix('cheerRound1', 'katrineCheerRound2', 24, false);
+				animation.addByPrefix('cheerRound2', 'katrineCheerRound2', 24, false);
+				animation.addByPrefix('cheerKnockout', 'katrineCheerKnockout', 24, false);
+				animation.addByIndices('sad', 'katrineMiss', [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12], "", 24, false);
+				animation.addByIndices('danceLeft', 'Katrine Dancing Beat', [30, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14], "", 24, false);
+				animation.addByIndices('danceRight', 'Katrine Dancing Beat', [15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29], "", 24, false);
+				animation.addByPrefix('scared', 'Katrine Fear', 24);
+				animation.addByPrefix('ding', 'katrineBellRing', 24);
+
+				addOffset('cheerRound1', 0, 150);
+				addOffset('cheerRound2', 0, 150);
+				addOffset('cheerKnockout', 0, 150);
+				// addOffset('sad', -2, -2);
+				// addOffset('danceLeft', 0, -9);
+				// addOffset('danceRight', 0, -9);
+
+				addOffset('sad', -2, 150);
+				addOffset('danceLeft', 0, 150);
+				addOffset('danceRight', 0, 150);
+
+				addOffset('scared', -2, 150);
+				addOffset('ding', -2, 150);
+
+				playAnim('danceRight');
+
+			case 'gf-tremors':
+				tex = Paths.getSparrowAtlas('characters/GF_assets_katrinemode_tremors');
+				frames = tex;
+				animation.addByPrefix('singLEFT', 'Katrine GF Left', 24, false);
+				animation.addByPrefix('singRIGHT', 'Katrine GF Right', 24, false);
+				animation.addByPrefix('singUP', 'Katrine GF Up', 24, false);
+				animation.addByPrefix('singDOWN', 'Katrine GF Down', 24, false);
+				animation.addByIndices('sad', 'katrineMiss', [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12], "", 24, false);
+				animation.addByIndices('danceLeft', 'Katrine Dancing Beat', [30, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14], "", 24, false);
+				animation.addByIndices('danceRight', 'Katrine Dancing Beat', [15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29], "", 24, false);
+				animation.addByPrefix('scared', 'Katrine Fear', 24);
+
+				// addOffset('cheer', 0, 85);
+				// addOffset('sad', -2, -2);
+				// addOffset('danceLeft', 0, -9);
+				// addOffset('danceRight', 0, -9);
+
+				addOffset('sad', -2, 150);
+				addOffset('danceLeft', 0, 150);
+				addOffset('danceRight', 0, 150);
+
+				addOffset("singUP", 0, 4);
+				addOffset("singRIGHT", 0, 150);
+				addOffset("singLEFT", 0, 150);
+				addOffset("singDOWN", 0, 150);
+
+				addOffset('scared', -2, 150);
+
+				playAnim('danceRight');
+			case 'gf-halloween':
+				tex = Paths.getSparrowAtlas('characters/GF_assets_katrinemode_spooktakular');
+				frames = tex;
+				animation.addByIndices('sad', 'katrineMiss', [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12], "", 24, false);
+				animation.addByIndices('danceLeft', 'Katrine Dancing Beat', [30, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14], "", 24, false);
+				animation.addByIndices('danceRight', 'Katrine Dancing Beat', [15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29], "", 24, false);
+				animation.addByPrefix('scared', 'Katrine Fear', 24);
+
+				// addOffset('cheer', 0, 85);
+				// addOffset('sad', -2, -2);
+				// addOffset('danceLeft', 0, -9);
+				// addOffset('danceRight', 0, -9);
+
+				addOffset('sad', -2, 200);
+				addOffset('danceLeft', 0, 200);
+				addOffset('danceRight', 0, 200);
+				addOffset('scared', -2, 200);
+
+				playAnim('danceRight');
+
 			case 'gf-car':
 				tex = Paths.getSparrowAtlas('characters/gfCar');
 				frames = tex;
@@ -561,6 +639,7 @@ class Character extends FlxSprite
 				animation.addByPrefix('singRIGHT', 'katrineHat_Right', 24, false);
 				animation.addByPrefix('singDOWN', 'katrineHat_Down', 24, false);
 				animation.addByPrefix('hey', 'katrineHey', 24, false);
+				animation.addByPrefix('hatEnding', 'katrineHatEnding', 24, false);
 
 				addOffset('idle', 100, -117);
 				addOffset("singUP", 100, -117);
@@ -568,6 +647,7 @@ class Character extends FlxSprite
 				addOffset("singLEFT", 100, -117);
 				addOffset("singDOWN", 100, -117);
 				addOffset("hey", 100, -117);
+				addOffset("hatEnding", 1640, -117);
 
 				playAnim('idle');
 
@@ -583,6 +663,8 @@ class Character extends FlxSprite
 				animation.addByPrefix('singDOWN', 'katrineMob_Down', 24, false);
 				animation.addByPrefix('singUP-alt', 'katrineMob_Laugh', 24, false);
 				animation.addByPrefix('singDOWN-alt', 'katrineMob_Laugh', 24, false);
+				animation.addByPrefix('singLEFT-alt', 'katrineMob_Laugh', 24, false);
+				animation.addByPrefix('singRIGHT-alt', 'katrineMob_Laugh', 24, false);
 
 				addOffset('idle', 100, 280);
 				addOffset("singUP", 100, 280);
@@ -591,6 +673,93 @@ class Character extends FlxSprite
 				addOffset("singDOWN", 100, 280);
 				addOffset("singUP-alt", 100, 280);
 				addOffset("singDOWN-alt", 100, 280);
+				addOffset("singRIGHT-alt", 100, 280);
+				addOffset("singLEFT-alt", 100, 280);
+
+				playAnim('idle');
+
+				updateHitbox();
+			case 'tony':
+				tex = Paths.getSparrowAtlas('characters/Tony');
+				frames = tex;
+
+				animation.addByPrefix('idle', 'Tony_Idle', 24, false);
+				animation.addByPrefix('singUP', 'Tony_Up', 24, false);
+				animation.addByPrefix('singLEFT', 'Tony_Left', 24, false);
+				animation.addByPrefix('singRIGHT', 'Tony_Right', 24, false);
+				animation.addByPrefix('singDOWN', 'Tony_Down', 24, false);
+
+				addOffset('idle', 100, -30);
+				addOffset("singUP", 100, 0);
+				addOffset("singRIGHT", 100, -90);
+				addOffset("singLEFT", 100, -20);
+				addOffset("singDOWN", 100, -55);
+
+				playAnim('idle');
+
+				updateHitbox();
+			case 'beth':
+				tex = Paths.getSparrowAtlas('characters/Bethalynn');
+				frames = tex;
+
+				animation.addByPrefix('idle', 'Beth_Idle', 24, false);
+				animation.addByPrefix('singUP', 'Beth_Up', 24, false);
+				animation.addByPrefix('singLEFT', 'Beth_Left', 24, false);
+				animation.addByPrefix('singRIGHT', 'Beth_Right', 24, false);
+				animation.addByPrefix('singDOWN', 'Beth_Down', 24, false);
+				animation.addByPrefix('singUP-alt', 'Beth_Stretch', 24, false);
+				animation.addByPrefix('singLEFT-alt', 'Beth_Left', 24, false);
+				animation.addByPrefix('singRIGHT-alt', 'Beth_Kick', 24, false);
+				animation.addByPrefix('singDOWN-alt', 'Beth_Down', 24, false);
+
+				addOffset('idle', 200, 340);
+				addOffset("singUP", 120, 340);
+				addOffset("singRIGHT", 200, 340);
+				addOffset("singLEFT", 200, 340);
+				addOffset("singDOWN", 200, 340);
+				addOffset("singUP-alt", 200, 340);
+				addOffset("singRIGHT-alt", 200, 340);
+				addOffset("singLEFT-alt", 200, 340);
+				addOffset("singDOWN-alt", 200, 340);
+
+				playAnim('idle');
+
+				updateHitbox();
+
+			case 'jacqui':
+				tex = Paths.getSparrowAtlas('characters/Jacquelette_Backup');
+				frames = tex;
+
+				animation.addByPrefix('idle', 'jacquiIdle', 24, false);
+				animation.addByPrefix('singUP', 'jacquiUp', 24, false);
+				animation.addByPrefix('singLEFT', 'jacquiLeft', 24, false);
+				animation.addByPrefix('singRIGHT', 'jacquiRight', 24, false);
+				animation.addByPrefix('singDOWN', 'jacquiDown', 24, false);
+
+				addOffset('idle', 180, 320);
+				addOffset("singUP", 370, 750);
+				addOffset("singRIGHT", 180, 200);
+				addOffset("singLEFT", 680, 430);
+				addOffset("singDOWN", 180, 250);
+
+				playAnim('idle');
+
+				updateHitbox();
+			case 'jacqui_alter':
+				tex = Paths.getSparrowAtlas('characters/Jacquelette_Alter');
+				frames = tex;
+
+				animation.addByPrefix('idle', 'jacquiIdle-Alt', 24, false);
+				animation.addByPrefix('singUP', 'jacquiUp-Alt', 24, false);
+				animation.addByPrefix('singLEFT', 'jacquiLeft-Alt', 24, false);
+				animation.addByPrefix('singRIGHT', 'jacquiRight-Alt', 24, false);
+				animation.addByPrefix('singDOWN', 'jacquiDown-Alt', 24, false);
+
+				addOffset('idle', 180, 270);
+				addOffset("singUP", 370, 750);
+				addOffset("singRIGHT", 180, 200);
+				addOffset("singLEFT", 680, 430);
+				addOffset("singDOWN", 180, 250);
 
 				playAnim('idle');
 
@@ -695,7 +864,36 @@ class Character extends FlxSprite
 						else
 							playAnim('danceLeft');
 					}
+				case 'gf-bodyslam':
+					if (!animation.curAnim.name.startsWith('hair'))
+					{
+						danced = !danced;
 
+						if (danced)
+							playAnim('danceRight');
+						else
+							playAnim('danceLeft');
+					}
+				case 'gf-tremors':
+					if (!animation.curAnim.name.startsWith('hair'))
+					{
+						danced = !danced;
+
+						if (danced)
+							playAnim('danceRight');
+						else
+							playAnim('danceLeft');
+					}
+				case 'gf-halloween':
+					if (!animation.curAnim.name.startsWith('hair'))
+					{
+						danced = !danced;
+
+						if (danced)
+							playAnim('danceRight');
+						else
+							playAnim('danceLeft');
+					}
 				case 'gf-car':
 					if (!animation.curAnim.name.startsWith('hair'))
 					{

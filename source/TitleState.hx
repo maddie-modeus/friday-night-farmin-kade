@@ -43,6 +43,8 @@ class TitleState extends MusicBeatState
 	var textGroup:FlxGroup;
 	var ngSpr:FlxSprite;
 	var devSpr:FlxSprite;
+	var devSpr_K:FlxSprite;
+	var devSpr_W:FlxSprite;
 
 	var curWacky:Array<String> = [];
 
@@ -157,25 +159,25 @@ class TitleState extends MusicBeatState
 		Conductor.changeBPM(102);
 		persistentUpdate = true;
 
-		var bg:FlxSprite = new FlxSprite().makeGraphic(FlxG.width, FlxG.height, FlxColor.BLACK);
-		// bg.antialiasing = true;
-		// bg.setGraphicSize(Std.int(bg.width * 0.6));
-		// bg.updateHitbox();
+		var bg:FlxSprite = new FlxSprite().makeGraphic(FlxG.width, FlxG.height).loadGraphic(Paths.image('titleBG_halloween'));
+		bg.antialiasing = true;
+		bg.updateHitbox();
 		add(bg);
 
-		logoBl = new FlxSprite(-150, -100);
-		logoBl.frames = Paths.getSparrowAtlas('logoBumpin');
+		logoBl = new FlxSprite(-35, -20);
+		logoBl.frames = Paths.getSparrowAtlas('logoBumpinSpooky');
 		logoBl.antialiasing = true;
 		logoBl.animation.addByPrefix('bump', 'logo bumpin', 24);
 		logoBl.animation.play('bump');
+		logoBl.setGraphicSize(Std.int(logoBl.width * 0.9));
 		logoBl.updateHitbox();
 		// logoBl.screenCenter();
 		// logoBl.color = FlxColor.BLACK;
 
-		gfDance = new FlxSprite(FlxG.width * 0.4, (FlxG.height * 0.005) - 35);
-		gfDance.frames = Paths.getSparrowAtlas('gfDanceTitle');
-		gfDance.animation.addByIndices('danceLeft', 'gfDance', [30, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14], "", 24, false);
-		gfDance.animation.addByIndices('danceRight', 'gfDance', [15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29], "", 24, false);
+		gfDance = new FlxSprite(FlxG.width * 0.52, (FlxG.height * 0.005) - 20);
+		gfDance.frames = Paths.getSparrowAtlas('katrineDanceTitleHalloween');
+		gfDance.animation.addByIndices('danceLeft', 'katrineDance', [30, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14], "", 24, false);
+		gfDance.animation.addByIndices('danceRight', 'katrineDance', [15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29], "", 24, false);
 		gfDance.antialiasing = true;
 		add(gfDance);
 		add(logoBl);
@@ -227,6 +229,24 @@ class TitleState extends MusicBeatState
 		devSpr.updateHitbox();
 		devSpr.screenCenter(X);
 		devSpr.antialiasing = true;
+		devSpr_K = new FlxSprite(0, FlxG.height * 0.37).loadGraphic(Paths.image('dev_bois_kaboombas'));
+		add(devSpr_K);
+		devSpr_K.visible = false;
+		devSpr_K.setGraphicSize(Std.int(devSpr.width * 0.5));
+		devSpr_K.updateHitbox();
+		devSpr_K.screenCenter(X);
+		devSpr_K.x += 460;
+		devSpr_K.y += 200;
+		devSpr_K.antialiasing = true;
+		devSpr_W = new FlxSprite(0, FlxG.height * 0.37).loadGraphic(Paths.image('dev_bois_wilde'));
+		add(devSpr_W);
+		devSpr_W.visible = false;
+		devSpr_W.setGraphicSize(Std.int(devSpr.width * 0.5));
+		devSpr_W.updateHitbox();
+		devSpr_W.screenCenter(X);
+		devSpr_W.x -= 460;
+		devSpr_W.y += 200;
+		devSpr_W.antialiasing = true;
 
 		FlxTween.tween(credTextShit, {y: credTextShit.y + 20}, 2.9, {ease: FlxEase.quadInOut, type: PINGPONG});
 
@@ -321,9 +341,10 @@ class TitleState extends MusicBeatState
 				{
 					if (!MainMenuState.kadeEngineVer.contains(data.trim()) && !OutdatedSubState.leftState && MainMenuState.nightly == "")
 					{
-						trace('outdated lmao! ' + data.trim() + ' != ' + MainMenuState.kadeEngineVer);
-						OutdatedSubState.needVer = data;
-						FlxG.switchState(new OutdatedSubState());
+						// trace('outdated lmao! ' + data.trim() + ' != ' + MainMenuState.kadeEngineVer);
+						// OutdatedSubState.needVer = data;
+						// FlxG.switchState(new OutdatedSubState());
+						FlxG.switchState(new MainMenuState());
 					}
 					else
 					{
@@ -402,10 +423,14 @@ class TitleState extends MusicBeatState
 			// credTextShit.visible = true;
 			case 3:
 				devSpr.visible = true;
+				devSpr_K.visible = true;
+				devSpr_W.visible = true;
 			// credTextShit.text += '\npresent...';
 			// credTextShit.addText();
 			case 4:
 				devSpr.visible = false;
+				devSpr_K.visible = false;
+				devSpr_W.visible = false;
 				deleteCoolText();
 			// credTextShit.visible = false;
 			// credTextShit.text = 'In association \nwith';
@@ -414,14 +439,16 @@ class TitleState extends MusicBeatState
 				if (Main.watermarks)
 					createCoolText(['using Kade Engine', 'by']);
 				else
-					createCoolText(['In Partnership', 'with']);
+					// createCoolText(['In Partnership', 'with']);
+					createCoolText(['using Kade Engine', 'by']);
 			case 7:
 				if (Main.watermarks)
 					addMoreText('KadeDeveloper');
 				else
 				{
-					addMoreText('Newgrounds');
-					ngSpr.visible = true;
+					// addMoreText('Newgrounds');
+					// ngSpr.visible = true;
+					addMoreText('KadeDeveloper');
 				}
 			// credTextShit.text += '\nNewgrounds';
 			case 8:

@@ -18,3 +18,7 @@ spirit
 katrine
 katrine-hat
 katrine-mobility
+tony
+beth
+jacqui
+jacqui-alter

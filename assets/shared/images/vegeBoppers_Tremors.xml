@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="vegeBoppers_Tremors.png">
+	<!-- Created with Adobe Animate version 21.0.5.40714 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="vegeBoppers_Tremors0000" x="0" y="0" width="2700" height="1198" pivotX="28.1" pivotY="-58.85" frameX="-9" frameY="0" frameWidth="2713" frameHeight="1198"/>
+	<SubTexture name="vegeBoppers_Tremors0001" x="0" y="0" width="2700" height="1198" frameX="-9" frameY="0" frameWidth="2713" frameHeight="1198"/>
+	<SubTexture name="vegeBoppers_Tremors0002" x="2700" y="0" width="2711" height="1198" frameX="0" frameY="0" frameWidth="2713" frameHeight="1198"/>
+	<SubTexture name="vegeBoppers_Tremors0003" x="2700" y="0" width="2711" height="1198" frameX="0" frameY="0" frameWidth="2713" frameHeight="1198"/>
+	<SubTexture name="vegeBoppers_Tremors0004" x="5411" y="0" width="2700" height="1198" frameX="-9" frameY="0" frameWidth="2713" frameHeight="1198"/>
+	<SubTexture name="vegeBoppers_Tremors0005" x="5411" y="0" width="2700" height="1198" frameX="-9" frameY="0" frameWidth="2713" frameHeight="1198"/>
+	<SubTexture name="vegeBoppers_Tremors0006" x="0" y="1198" width="2711" height="1198" frameX="0" frameY="0" frameWidth="2713" frameHeight="1198"/>
+	<SubTexture name="vegeBoppers_Tremors0007" x="0" y="1198" width="2711" height="1198" frameX="0" frameY="0" frameWidth="2713" frameHeight="1198"/>
+	<SubTexture name="vegeBoppers_Tremors0008" x="2711" y="1198" width="2700" height="1198" frameX="-11" frameY="0" frameWidth="2713" frameHeight="1198"/>
+	<SubTexture name="vegeBoppers_Tremors0009" x="2711" y="1198" width="2700" height="1198" frameX="-11" frameY="0" frameWidth="2713" frameHeight="1198"/>
+	<SubTexture name="vegeBoppers_Tremors0010" x="5411" y="1198" width="2707" height="1198" frameX="0" frameY="0" frameWidth="2713" frameHeight="1198"/>
+	<SubTexture name="vegeBoppers_Tremors0011" x="5411" y="1198" width="2707" height="1198" frameX="0" frameY="0" frameWidth="2713" frameHeight="1198"/>
+	<SubTexture name="vegeBoppers_Tremors0012" x="0" y="2396" width="2704" height="1198" frameX="-9" frameY="0" frameWidth="2713" frameHeight="1198"/>
+	<SubTexture name="vegeBoppers_Tremors0013" x="0" y="2396" width="2704" height="1198" frameX="-9" frameY="0" frameWidth="2713" frameHeight="1198"/>
+</TextureAtlas>

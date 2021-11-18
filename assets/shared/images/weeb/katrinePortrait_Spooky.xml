@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="katrinePortrait_Spooky.png">
+	<!-- Created with Adobe Animate version 21.0.5.40714 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="katrinePortraitHalloweenEnter0000" x="0" y="0" width="553" height="742" pivotX="471.45" pivotY="76.55" frameX="0" frameY="0" frameWidth="614" frameHeight="742"/>
+	<SubTexture name="katrinePortraitHalloweenEnter0001" x="553" y="0" width="554" height="742" frameX="-36" frameY="0" frameWidth="614" frameHeight="742"/>
+	<SubTexture name="katrinePortraitHalloweenEnter0002" x="553" y="0" width="554" height="742" frameX="-36" frameY="0" frameWidth="614" frameHeight="742"/>
+	<SubTexture name="katrinePortraitHalloweenEnter0003" x="553" y="0" width="554" height="742" frameX="-54" frameY="0" frameWidth="614" frameHeight="742"/>
+	<SubTexture name="katrinePortraitHalloweenEnter0004" x="553" y="0" width="554" height="742" frameX="-54" frameY="0" frameWidth="614" frameHeight="742"/>
+	<SubTexture name="katrinePortraitHalloweenEnter0005" x="553" y="0" width="554" height="742" frameX="-61" frameY="0" frameWidth="614" frameHeight="742"/>
+	<SubTexture name="katrinePortraitHalloweenEnter0006" x="553" y="0" width="554" height="742" frameX="-61" frameY="0" frameWidth="614" frameHeight="742"/>
+	<SubTexture name="katrinePortraitHalloweenEnter0007" x="553" y="0" width="554" height="742" frameX="-61" frameY="0" frameWidth="614" frameHeight="742"/>
+</TextureAtlas>

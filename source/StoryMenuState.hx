@@ -31,13 +31,14 @@ class StoryMenuState extends MusicBeatState
 		// ['Satin-Panties', "High", "Milf"],
 		// ['Cocoa', 'Eggnog', 'Winter-Horrorland'],
 		// ['Senpai', 'Roses', 'Thorns'],
-		['Daisy-Dukes', 'Squaredance', 'Carotene'] // ['Carotene', 'Daisy-Dukes']
+		['Daisy-Dukes', 'Squaredance', 'Carotene'], // ['Carotene', 'Daisy-Dukes']
 		// ['Carotene', 'Squaredance', 'Daisy-Dukes']
+		['Pompous'] // ['Bodyslam', 'Tremors']
 	];
 	var curDifficulty:Int = 1;
 
 	// public static var weekUnlocked:Array<Bool> = [true, true, true, true, true, true, true, true];
-	public static var weekUnlocked:Array<Bool> = [true, true];
+	public static var weekUnlocked:Array<Bool> = [true, true, true];
 
 	var weekCharacters:Array<Dynamic> = [
 		['', 'bf', 'gf'],
@@ -47,18 +48,19 @@ class StoryMenuState extends MusicBeatState
 		// ['mom', 'bf', 'gf'],
 		// ['parents-christmas', 'bf', 'gf'],
 		// ['senpai', 'bf', 'gf'],
+		['katrine', 'bf', 'gf'],
 		['katrine', 'bf', 'gf']
 	];
 
 	var weekNames:Array<String> = [
 		"How to Funk",
 		"CITYBOY VS COUNTRY FUNKIN",
-		"Spooky Month",
+		"GOURDS AND GOBLINS", // "BEETDOWN IN THE UNDERGROUND",
 		"PICO",
 		"MOMMY MUST MURDER",
 		"RED SNOW",
 		"Hating Simulator ft. Moawling",
-		"CITYBOY VS COUNTRY FUNKIN"
+		"CITYBOY VS COUNTRY FUNKIN",
 	];
 
 	var txtWeekTitle:FlxText;
@@ -222,6 +224,10 @@ class StoryMenuState extends MusicBeatState
 		{
 			lock.y = grpWeekText.members[lock.ID].y;
 		});
+		if (curWeek == 2 && curDifficulty != 2)
+		{
+			changeDifficulty(2);
+		}
 
 		if (!movedBack)
 		{
@@ -316,7 +322,8 @@ class StoryMenuState extends MusicBeatState
 	function changeDifficulty(change:Int = 0):Void
 	{
 		curDifficulty += change;
-
+		if (curWeek == 2)
+			curDifficulty = 2;
 		if (curDifficulty < 0)
 			curDifficulty = 2;
 		if (curDifficulty > 2)

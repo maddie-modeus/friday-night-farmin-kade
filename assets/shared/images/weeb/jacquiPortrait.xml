@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="jacquiPortrait.png">
+	<!-- Created with Adobe Animate version 21.0.5.40714 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="jacquiPortraitEnter0000" x="0" y="0" width="537" height="682" pivotX="-0.35" pivotY="16.3" frameX="0" frameY="0" frameWidth="597" frameHeight="682"/>
+	<SubTexture name="jacquiPortraitEnter0001" x="0" y="0" width="537" height="682" frameX="-36" frameY="0" frameWidth="597" frameHeight="682"/>
+	<SubTexture name="jacquiPortraitEnter0002" x="0" y="0" width="537" height="682" frameX="-36" frameY="0" frameWidth="597" frameHeight="682"/>
+	<SubTexture name="jacquiPortraitEnter0003" x="0" y="0" width="537" height="682" frameX="-54" frameY="0" frameWidth="597" frameHeight="682"/>
+	<SubTexture name="jacquiPortraitEnter0004" x="0" y="0" width="537" height="682" frameX="-54" frameY="0" frameWidth="597" frameHeight="682"/>
+	<SubTexture name="jacquiPortraitEnter0005" x="0" y="0" width="537" height="682" frameX="-61" frameY="0" frameWidth="597" frameHeight="682"/>
+	<SubTexture name="jacquiPortraitEnter0006" x="0" y="0" width="537" height="682" frameX="-61" frameY="0" frameWidth="597" frameHeight="682"/>
+	<SubTexture name="jacquiPortraitEnter0007" x="0" y="0" width="537" height="682" frameX="-61" frameY="0" frameWidth="597" frameHeight="682"/>
+</TextureAtlas>

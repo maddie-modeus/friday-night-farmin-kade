@@ -10,12 +10,11 @@ import flixel.text.FlxText;
 import flixel.util.FlxColor;
 import lime.utils.Assets;
 
+using StringTools;
 
 #if windows
 import Discord.DiscordClient;
 #end
-
-using StringTools;
 
 class FreeplayState extends MusicBeatState
 {
@@ -53,10 +52,10 @@ class FreeplayState extends MusicBeatState
 			}
 		 */
 
-		 #if windows
-		 // Updating Discord Rich Presence
-		 DiscordClient.changePresence("In the Freeplay Menu", null);
-		 #end
+		#if windows
+		// Updating Discord Rich Presence
+		DiscordClient.changePresence("In the Freeplay Menu", null);
+		#end
 
 		var isDebug:Bool = false;
 
@@ -68,7 +67,7 @@ class FreeplayState extends MusicBeatState
 
 		// LOAD CHARACTERS
 
-		var bg:FlxSprite = new FlxSprite().loadGraphic(Paths.image('menuBGBlue'));
+		var bg:FlxSprite = new FlxSprite().loadGraphic(Paths.image('menuBGGreen'));
 		add(bg);
 
 		grpSongs = new FlxTypedGroup<Alphabet>();
@@ -119,7 +118,7 @@ class FreeplayState extends MusicBeatState
 		selector.text = ">";
 		// add(selector);
 
-		var swag:Alphabet = new Alphabet(1, 0, "swag");
+		// var swag:Alphabet = new Alphabet(1, 0, "swag");
 
 		// JUST DOIN THIS SHIT FOR TESTING!!!
 		/* 
@@ -202,13 +201,13 @@ class FreeplayState extends MusicBeatState
 
 		if (accepted)
 		{
-			trace(StringTools.replace(songs[curSelected].songName," ", "-").toLowerCase());
+			trace(StringTools.replace(songs[curSelected].songName, " ", "-").toLowerCase());
 
-			var poop:String = Highscore.formatSong(StringTools.replace(songs[curSelected].songName," ", "-").toLowerCase(), curDifficulty);
+			var poop:String = Highscore.formatSong(StringTools.replace(songs[curSelected].songName, " ", "-").toLowerCase(), curDifficulty);
 
 			trace(poop);
 
-			PlayState.SONG = Song.loadFromJson(poop, StringTools.replace(songs[curSelected].songName," ", "-").toLowerCase());
+			PlayState.SONG = Song.loadFromJson(poop, StringTools.replace(songs[curSelected].songName, " ", "-").toLowerCase());
 			PlayState.isStoryMode = false;
 			PlayState.storyDifficulty = curDifficulty;
 			PlayState.storyWeek = songs[curSelected].week;
@@ -221,6 +220,10 @@ class FreeplayState extends MusicBeatState
 	{
 		curDifficulty += change;
 
+		if (songs[curSelected].songName.toLowerCase() == 'tremors'
+			|| songs[curSelected].songName.toLowerCase() == 'bodyslam'
+			|| songs[curSelected].songName.toLowerCase() == 'pompous')
+			curDifficulty = 2;
 		if (curDifficulty < 0)
 			curDifficulty = 2;
 		if (curDifficulty > 2)
@@ -263,6 +266,11 @@ class FreeplayState extends MusicBeatState
 		intendedScore = Highscore.getScore(songs[curSelected].songName, curDifficulty);
 		// lerpScore = 0;
 		#end
+
+		if (songs[curSelected].songName.toLowerCase() == 'tremors'
+			|| songs[curSelected].songName.toLowerCase() == 'bodyslam'
+			|| songs[curSelected].songName.toLowerCase() == 'pompous')
+			changeDiff(2);
 
 		#if PRELOAD_ALL
 		FlxG.sound.playMusic(Paths.inst(songs[curSelected].songName), 0);

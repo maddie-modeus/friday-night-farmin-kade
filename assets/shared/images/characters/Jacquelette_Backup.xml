@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="Jacquelette.png">
+	<!-- Created with Adobe Animate version 21.0.5.40714 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="jacquiDown0000" x="5656" y="1223" width="737" height="1092" pivotX="394.1" pivotY="425.7" frameX="0" frameY="-55" frameWidth="737" frameHeight="1147"/>
+	<SubTexture name="jacquiDown0001" x="6393" y="1223" width="719" height="1118" frameX="-7" frameY="-23" frameWidth="737" frameHeight="1147"/>
+	<SubTexture name="jacquiDown0002" x="7112" y="1223" width="698" height="1128" frameX="-14" frameY="0" frameWidth="737" frameHeight="1147"/>
+	<SubTexture name="jacquiDown0003" x="0" y="2376" width="719" height="1123" frameX="-7" frameY="-3" frameWidth="737" frameHeight="1147"/>
+	<SubTexture name="jacquiDown0004" x="719" y="2376" width="719" height="1123" frameX="-7" frameY="-3" frameWidth="737" frameHeight="1147"/>
+	<SubTexture name="jacquiDown0005" x="1438" y="2376" width="719" height="1123" frameX="-7" frameY="-3" frameWidth="737" frameHeight="1147"/>
+	<SubTexture name="jacquiDown0006" x="1438" y="2376" width="719" height="1123" frameX="-7" frameY="-3" frameWidth="737" frameHeight="1147"/>
+	<SubTexture name="jacquiIdle0000" x="0" y="0" width="707" height="1143" pivotX="374.4" pivotY="520.95" frameX="-26" frameY="-75" frameWidth="759" frameHeight="1228"/>
+	<SubTexture name="jacquiIdle0001" x="0" y="0" width="707" height="1143" frameX="-26" frameY="-75" frameWidth="759" frameHeight="1228"/>
+	<SubTexture name="jacquiIdle0002" x="707" y="0" width="707" height="1143" frameX="-26" frameY="-75" frameWidth="759" frameHeight="1228"/>
+	<SubTexture name="jacquiIdle0003" x="707" y="0" width="707" height="1143" frameX="-26" frameY="-75" frameWidth="759" frameHeight="1228"/>
+	<SubTexture name="jacquiIdle0004" x="1414" y="0" width="731" height="1123" frameX="-14" frameY="-92" frameWidth="759" frameHeight="1228"/>
+	<SubTexture name="jacquiIdle0005" x="1414" y="0" width="731" height="1123" frameX="-14" frameY="-92" frameWidth="759" frameHeight="1228"/>
+	<SubTexture name="jacquiIdle0006" x="2145" y="0" width="759" height="1106" frameX="0" frameY="-107" frameWidth="759" frameHeight="1228"/>
+	<SubTexture name="jacquiIdle0007" x="2145" y="0" width="759" height="1106" frameX="0" frameY="-107" frameWidth="759" frameHeight="1228"/>
+	<SubTexture name="jacquiIdle0008" x="2904" y="0" width="726" height="1134" frameX="-16" frameY="-83" frameWidth="759" frameHeight="1228"/>
+	<SubTexture name="jacquiIdle0009" x="2904" y="0" width="726" height="1134" frameX="-16" frameY="-83" frameWidth="759" frameHeight="1228"/>
+	<SubTexture name="jacquiIdle0010" x="3630" y="0" width="702" height="1223" frameX="-28" frameY="0" frameWidth="759" frameHeight="1228"/>
+	<SubTexture name="jacquiIdle0011" x="4332" y="0" width="717" height="1171" frameX="-21" frameY="-54" frameWidth="759" frameHeight="1228"/>
+	<SubTexture name="jacquiIdle0012" x="5049" y="0" width="717" height="1154" frameX="-21" frameY="-71" frameWidth="759" frameHeight="1228"/>
+	<SubTexture name="jacquiIdle0013" x="5766" y="0" width="707" height="1154" frameX="-26" frameY="-74" frameWidth="759" frameHeight="1228"/>
+	<SubTexture name="jacquiIdle0014" x="6473" y="0" width="707" height="1153" frameX="-26" frameY="-75" frameWidth="759" frameHeight="1228"/>
+	<SubTexture name="jacquiIdle0015" x="7180" y="0" width="707" height="1153" frameX="-26" frameY="-75" frameWidth="759" frameHeight="1228"/>
+	<SubTexture name="jacquiIdle0016" x="0" y="1223" width="707" height="1153" frameX="-26" frameY="-75" frameWidth="759" frameHeight="1228"/>
+	<SubTexture name="jacquiIdle0017" x="707" y="1223" width="707" height="1153" frameX="-26" frameY="-75" frameWidth="759" frameHeight="1228"/>
+	<SubTexture name="jacquiIdle0018" x="1414" y="1223" width="707" height="1153" frameX="-26" frameY="-75" frameWidth="759" frameHeight="1228"/>
+	<SubTexture name="jacquiIdle0019" x="2121" y="1223" width="707" height="1153" frameX="-26" frameY="-75" frameWidth="759" frameHeight="1228"/>
+	<SubTexture name="jacquiIdle0020" x="2121" y="1223" width="707" height="1153" frameX="-26" frameY="-75" frameWidth="759" frameHeight="1228"/>
+	<SubTexture name="jacquiIdle0021" x="2828" y="1223" width="707" height="1153" frameX="-26" frameY="-75" frameWidth="759" frameHeight="1228"/>
+	<SubTexture name="jacquiIdle0022" x="2828" y="1223" width="707" height="1153" frameX="-26" frameY="-75" frameWidth="759" frameHeight="1228"/>
+	<SubTexture name="jacquiIdle0023" x="2828" y="1223" width="707" height="1153" frameX="-26" frameY="-75" frameWidth="759" frameHeight="1228"/>
+	<SubTexture name="jacquiIdle0024" x="3535" y="1223" width="707" height="1148" frameX="-26" frameY="-75" frameWidth="759" frameHeight="1228"/>
+	<SubTexture name="jacquiIdle0025" x="4242" y="1223" width="707" height="1143" frameX="-26" frameY="-75" frameWidth="759" frameHeight="1228"/>
+	<SubTexture name="jacquiIdle0026" x="4949" y="1223" width="707" height="1143" frameX="-26" frameY="-75" frameWidth="759" frameHeight="1228"/>
+	<SubTexture name="jacquiLeft0000" x="2157" y="2376" width="1487" height="1308" pivotX="835.95" pivotY="630.95" frameX="0" frameY="-25" frameWidth="1503" frameHeight="1333"/>
+	<SubTexture name="jacquiLeft0001" x="3644" y="2376" width="1465" height="1308" frameX="-38" frameY="-25" frameWidth="1503" frameHeight="1333"/>
+	<SubTexture name="jacquiLeft0002" x="5109" y="2376" width="1404" height="1308" frameX="-97" frameY="-25" frameWidth="1503" frameHeight="1333"/>
+	<SubTexture name="jacquiLeft0003" x="6513" y="2376" width="1412" height="1333" frameX="-82" frameY="0" frameWidth="1503" frameHeight="1333"/>
+	<SubTexture name="jacquiLeft0004" x="0" y="3709" width="1412" height="1308" frameX="-82" frameY="-25" frameWidth="1503" frameHeight="1333"/>
+	<SubTexture name="jacquiLeft0005" x="0" y="3709" width="1412" height="1308" frameX="-82" frameY="-25" frameWidth="1503" frameHeight="1333"/>
+	<SubTexture name="jacquiLeft0006" x="0" y="3709" width="1412" height="1308" frameX="-82" frameY="-25" frameWidth="1503" frameHeight="1333"/>
+	<SubTexture name="jacquiRight0000" x="1412" y="3709" width="1071" height="1025" pivotX="435.95" pivotY="393.85" frameX="-33" frameY="-36" frameWidth="1108" frameHeight="1061"/>
+	<SubTexture name="jacquiRight0001" x="2483" y="3709" width="1084" height="1048" frameX="-24" frameY="-13" frameWidth="1108" frameHeight="1061"/>
+	<SubTexture name="jacquiRight0002" x="3567" y="3709" width="1067" height="1061" frameX="0" frameY="0" frameWidth="1108" frameHeight="1061"/>
+	<SubTexture name="jacquiRight0003" x="4634" y="3709" width="1055" height="1047" frameX="-9" frameY="-14" frameWidth="1108" frameHeight="1061"/>
+	<SubTexture name="jacquiRight0004" x="5689" y="3709" width="1058" height="1053" frameX="-9" frameY="-8" frameWidth="1108" frameHeight="1061"/>
+	<SubTexture name="jacquiRight0005" x="5689" y="3709" width="1058" height="1053" frameX="-9" frameY="-8" frameWidth="1108" frameHeight="1061"/>
+	<SubTexture name="jacquiRight0006" x="5689" y="3709" width="1058" height="1053" frameX="-9" frameY="-8" frameWidth="1108" frameHeight="1061"/>
+	<SubTexture name="jacquiUp0000" x="6747" y="3709" width="906" height="1515" pivotX="651.1" pivotY="951.25" frameX="-2" frameY="0" frameWidth="1003" frameHeight="1531"/>
+	<SubTexture name="jacquiUp0001" x="0" y="5224" width="916" height="1462" frameX="-17" frameY="-61" frameWidth="1003" frameHeight="1531"/>
+	<SubTexture name="jacquiUp0002" x="916" y="5224" width="1003" height="1394" frameX="0" frameY="-137" frameWidth="1003" frameHeight="1531"/>
+	<SubTexture name="jacquiUp0003" x="1919" y="5224" width="922" height="1445" frameX="-36" frameY="-78" frameWidth="1003" frameHeight="1531"/>
+	<SubTexture name="jacquiUp0004" x="2841" y="5224" width="935" height="1425" frameX="-29" frameY="-95" frameWidth="1003" frameHeight="1531"/>
+	<SubTexture name="jacquiUp0005" x="3776" y="5224" width="934" height="1425" frameX="-30" frameY="-95" frameWidth="1003" frameHeight="1531"/>
+	<SubTexture name="jacquiUp0006" x="4710" y="5224" width="938" height="1425" frameX="-26" frameY="-95" frameWidth="1003" frameHeight="1531"/>
+</TextureAtlas>

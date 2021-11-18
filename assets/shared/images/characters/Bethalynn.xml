@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="Bethalynn.png">
+	<!-- Created with Adobe Animate version 21.0.5.40714 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="Beth_Idle0000" x="0" y="0" width="641" height="850" pivotX="176.8" pivotY="661.45" frameX="-263" frameY="-241" frameWidth="938" frameHeight="1096"/>
+	<SubTexture name="Beth_Idle0001" x="0" y="0" width="641" height="850" frameX="-263" frameY="-241" frameWidth="938" frameHeight="1096"/>
+	<SubTexture name="Beth_Idle0002" x="641" y="0" width="636" height="840" frameX="-260" frameY="-251" frameWidth="938" frameHeight="1096"/>
+	<SubTexture name="Beth_Idle0003" x="641" y="0" width="636" height="840" frameX="-260" frameY="-251" frameWidth="938" frameHeight="1096"/>
+	<SubTexture name="Beth_Idle0004" x="1277" y="0" width="636" height="824" frameX="-253" frameY="-267" frameWidth="938" frameHeight="1096"/>
+	<SubTexture name="Beth_Idle0005" x="1277" y="0" width="636" height="824" frameX="-253" frameY="-267" frameWidth="938" frameHeight="1096"/>
+	<SubTexture name="Beth_Idle0006" x="1913" y="0" width="637" height="820" frameX="-253" frameY="-271" frameWidth="938" frameHeight="1096"/>
+	<SubTexture name="Beth_Idle0007" x="1913" y="0" width="637" height="820" frameX="-253" frameY="-271" frameWidth="938" frameHeight="1096"/>
+	<SubTexture name="Beth_Idle0008" x="2550" y="0" width="635" height="831" frameX="-260" frameY="-260" frameWidth="938" frameHeight="1096"/>
+	<SubTexture name="Beth_Idle0009" x="2550" y="0" width="635" height="831" frameX="-260" frameY="-260" frameWidth="938" frameHeight="1096"/>
+	<SubTexture name="Beth_Idle0010" x="3185" y="0" width="647" height="842" frameX="-263" frameY="-249" frameWidth="938" frameHeight="1096"/>
+	<SubTexture name="Beth_Idle0011" x="3185" y="0" width="647" height="842" frameX="-263" frameY="-249" frameWidth="938" frameHeight="1096"/>
+	<SubTexture name="Beth_Left0000" x="0" y="850" width="430" height="1086" frameX="-2" frameY="-4" frameWidth="938" frameHeight="1096"/>
+	<SubTexture name="Beth_Left0001" x="0" y="850" width="430" height="1086" frameX="-2" frameY="-4" frameWidth="938" frameHeight="1096"/>
+	<SubTexture name="Beth_Left0002" x="430" y="850" width="439" height="1091" frameX="0" frameY="0" frameWidth="938" frameHeight="1096"/>
+	<SubTexture name="Beth_Left0003" x="430" y="850" width="439" height="1091" frameX="0" frameY="0" frameWidth="938" frameHeight="1096"/>
+	<SubTexture name="Beth_Left0004" x="430" y="850" width="439" height="1091" frameX="0" frameY="0" frameWidth="938" frameHeight="1096"/>
+	<SubTexture name="Beth_Left0005" x="430" y="850" width="439" height="1091" frameX="0" frameY="0" frameWidth="938" frameHeight="1096"/>
+	<SubTexture name="Beth_Left0006" x="430" y="850" width="439" height="1091" frameX="0" frameY="0" frameWidth="938" frameHeight="1096"/>
+	<SubTexture name="Beth_Down0000" x="869" y="850" width="486" height="778" frameX="-292" frameY="-310" frameWidth="938" frameHeight="1096"/>
+	<SubTexture name="Beth_Down0001" x="869" y="850" width="486" height="778" frameX="-292" frameY="-310" frameWidth="938" frameHeight="1096"/>
+	<SubTexture name="Beth_Down0002" x="1355" y="850" width="492" height="761" frameX="-294" frameY="-327" frameWidth="938" frameHeight="1096"/>
+	<SubTexture name="Beth_Down0003" x="1355" y="850" width="492" height="761" frameX="-294" frameY="-327" frameWidth="938" frameHeight="1096"/>
+	<SubTexture name="Beth_Down0004" x="1355" y="850" width="492" height="761" frameX="-294" frameY="-327" frameWidth="938" frameHeight="1096"/>
+	<SubTexture name="Beth_Down0005" x="1355" y="850" width="492" height="761" frameX="-294" frameY="-327" frameWidth="938" frameHeight="1096"/>
+	<SubTexture name="Beth_Down0006" x="1355" y="850" width="492" height="761" frameX="-294" frameY="-327" frameWidth="938" frameHeight="1096"/>
+	<SubTexture name="Beth_Right0000" x="1847" y="850" width="626" height="909" frameX="-300" frameY="-187" frameWidth="938" frameHeight="1096"/>
+	<SubTexture name="Beth_Right0001" x="1847" y="850" width="626" height="909" frameX="-300" frameY="-187" frameWidth="938" frameHeight="1096"/>
+	<SubTexture name="Beth_Right0002" x="2473" y="850" width="634" height="916" frameX="-304" frameY="-180" frameWidth="938" frameHeight="1096"/>
+	<SubTexture name="Beth_Right0003" x="2473" y="850" width="634" height="916" frameX="-304" frameY="-180" frameWidth="938" frameHeight="1096"/>
+	<SubTexture name="Beth_Right0004" x="2473" y="850" width="634" height="916" frameX="-304" frameY="-180" frameWidth="938" frameHeight="1096"/>
+	<SubTexture name="Beth_Right0005" x="2473" y="850" width="634" height="916" frameX="-304" frameY="-180" frameWidth="938" frameHeight="1096"/>
+	<SubTexture name="Beth_Right0006" x="2473" y="850" width="634" height="916" frameX="-304" frameY="-180" frameWidth="938" frameHeight="1096"/>
+	<SubTexture name="Beth_Up0000" x="3107" y="850" width="540" height="957" frameX="-8" frameY="-137" frameWidth="938" frameHeight="1096"/>
+	<SubTexture name="Beth_Up0001" x="3107" y="850" width="540" height="957" frameX="-8" frameY="-137" frameWidth="938" frameHeight="1096"/>
+	<SubTexture name="Beth_Up0002" x="0" y="1941" width="533" height="963" frameX="-14" frameY="-131" frameWidth="938" frameHeight="1096"/>
+	<SubTexture name="Beth_Up0003" x="0" y="1941" width="533" height="963" frameX="-14" frameY="-131" frameWidth="938" frameHeight="1096"/>
+	<SubTexture name="Beth_Up0004" x="0" y="1941" width="533" height="963" frameX="-14" frameY="-131" frameWidth="938" frameHeight="1096"/>
+	<SubTexture name="Beth_Up0005" x="0" y="1941" width="533" height="963" frameX="-14" frameY="-131" frameWidth="938" frameHeight="1096"/>
+	<SubTexture name="Beth_Up0006" x="0" y="1941" width="533" height="963" frameX="-14" frameY="-131" frameWidth="938" frameHeight="1096"/>
+	<SubTexture name="Beth_Stretch0000" x="533" y="1941" width="342" height="995" frameX="-206" frameY="-101" frameWidth="938" frameHeight="1096"/>
+	<SubTexture name="Beth_Stretch0001" x="533" y="1941" width="342" height="995" frameX="-206" frameY="-101" frameWidth="938" frameHeight="1096"/>
+	<SubTexture name="Beth_Stretch0002" x="875" y="1941" width="341" height="1007" frameX="-209" frameY="-89" frameWidth="938" frameHeight="1096"/>
+	<SubTexture name="Beth_Stretch0003" x="875" y="1941" width="341" height="1007" frameX="-209" frameY="-89" frameWidth="938" frameHeight="1096"/>
+	<SubTexture name="Beth_Stretch0004" x="875" y="1941" width="341" height="1007" frameX="-209" frameY="-89" frameWidth="938" frameHeight="1096"/>
+	<SubTexture name="Beth_Stretch0005" x="875" y="1941" width="341" height="1007" frameX="-209" frameY="-89" frameWidth="938" frameHeight="1096"/>
+	<SubTexture name="Beth_Stretch0006" x="875" y="1941" width="341" height="1007" frameX="-209" frameY="-89" frameWidth="938" frameHeight="1096"/>
+	<SubTexture name="Beth_Kick0000" x="1216" y="1941" width="737" height="970" frameX="-71" frameY="-123" frameWidth="938" frameHeight="1096"/>
+	<SubTexture name="Beth_Kick0001" x="1216" y="1941" width="737" height="970" frameX="-71" frameY="-123" frameWidth="938" frameHeight="1096"/>
+	<SubTexture name="Beth_Kick0002" x="1953" y="1941" width="750" height="990" frameX="-71" frameY="-105" frameWidth="938" frameHeight="1096"/>
+	<SubTexture name="Beth_Kick0003" x="1953" y="1941" width="750" height="990" frameX="-71" frameY="-105" frameWidth="938" frameHeight="1096"/>
+	<SubTexture name="Beth_Kick0004" x="1953" y="1941" width="750" height="990" frameX="-71" frameY="-105" frameWidth="938" frameHeight="1096"/>
+	<SubTexture name="Beth_Kick0005" x="1953" y="1941" width="750" height="990" frameX="-71" frameY="-105" frameWidth="938" frameHeight="1096"/>
+	<SubTexture name="Beth_Kick0006" x="1953" y="1941" width="750" height="990" frameX="-71" frameY="-105" frameWidth="938" frameHeight="1096"/>
+</TextureAtlas>

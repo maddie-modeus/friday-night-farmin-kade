@@ -3,3 +3,6 @@ gf-car
 gf-christmas
 gf-pixel
 gf-country
+gf-bodyslam
+gf-tremors
+gf-halloween

@@ -29,6 +29,7 @@ class DialogueBox extends FlxSpriteGroup
 	public var finishThing:Void->Void;
 
 	var portraitLeft:FlxSprite;
+	var portraitLeft2:FlxSprite;
 	var portraitRight:FlxSprite;
 
 	var handSelect:FlxSprite;
@@ -60,7 +61,8 @@ class DialogueBox extends FlxSpriteGroup
 				bgFade.alpha = 0.7;
 		}, 5);
 
-		box = new FlxSprite(-20, 45);
+		box = new FlxSprite(-20, 80);
+		box.setGraphicSize(Std.int(box.width * 1.5));
 
 		var hasDialog = false;
 		switch (PlayState.SONG.song.toLowerCase())
@@ -102,6 +104,27 @@ class DialogueBox extends FlxSpriteGroup
 				box.animation.addByPrefix('normalOpen', 'Speech Bubble Normal Open', 24, false);
 				box.animation.addByIndices('normal', 'speech bubble normal', [4], "", 24);
 			case 'carotene':
+				box.y += 350;
+				box.x += 40;
+				hasDialog = true;
+				box.frames = Paths.getSparrowAtlas('weeb/speech_bubble_talking');
+				box.animation.addByPrefix('normalOpen', 'Speech Bubble Normal Open', 24, false);
+				box.animation.addByIndices('normal', 'speech bubble normal', [4], "", 24);
+			case 'bodyslam':
+				box.y += 350;
+				box.x += 40;
+				hasDialog = true;
+				box.frames = Paths.getSparrowAtlas('weeb/speech_bubble_talking');
+				box.animation.addByPrefix('normalOpen', 'Speech Bubble Normal Open', 24, false);
+				box.animation.addByIndices('normal', 'speech bubble normal', [4], "", 24);
+			case 'tremors':
+				box.y += 350;
+				box.x += 40;
+				hasDialog = true;
+				box.frames = Paths.getSparrowAtlas('weeb/speech_bubble_talking');
+				box.animation.addByPrefix('normalOpen', 'Speech Bubble Normal Open', 24, false);
+				box.animation.addByIndices('normal', 'speech bubble normal', [4], "", 24);
+			case 'pompous':
 				box.y += 350;
 				box.x += 40;
 				hasDialog = true;
@@ -174,6 +197,76 @@ class DialogueBox extends FlxSpriteGroup
 			add(portraitRight);
 			portraitRight.visible = false;
 		}
+		if (PlayState.SONG.song.toLowerCase() == 'bodyslam')
+		{
+			portraitLeft = new FlxSprite(-320, 0);
+			portraitLeft.frames = Paths.getSparrowAtlas('weeb/katrinePortraitEnter');
+			portraitLeft.animation.addByPrefix('enter', 'katrinePortraitEnter', 24, false);
+			portraitLeft.updateHitbox();
+			portraitLeft.scrollFactor.set();
+			add(portraitLeft);
+			portraitLeft.visible = false;
+
+			portraitLeft2 = new FlxSprite(-320, 0);
+			portraitLeft2.frames = Paths.getSparrowAtlas('weeb/katrinePortraitEnter');
+			portraitLeft2.animation.addByPrefix('enter', 'katrinePortraitEnter', 24, false);
+			portraitLeft2.updateHitbox();
+			portraitLeft2.scrollFactor.set();
+			add(portraitLeft2);
+			portraitLeft2.visible = false;
+
+			portraitRight = new FlxSprite(700, 130);
+			portraitRight.frames = Paths.getSparrowAtlas('weeb/bfPortraitEnter');
+			portraitRight.animation.addByPrefix('enter', 'bfPortraitEnter', 24, false);
+			portraitRight.updateHitbox();
+			portraitRight.scrollFactor.set();
+			add(portraitRight);
+			portraitRight.visible = false;
+		}
+		if (PlayState.SONG.song.toLowerCase() == 'tremors')
+		{
+			portraitLeft = new FlxSprite(-320, 0);
+			portraitLeft.frames = Paths.getSparrowAtlas('weeb/katrinePortraitEnter');
+			portraitLeft.animation.addByPrefix('enter', 'katrinePortraitEnter', 24, false);
+			portraitLeft.updateHitbox();
+			portraitLeft.scrollFactor.set();
+			add(portraitLeft);
+			portraitLeft.visible = false;
+
+			portraitRight = new FlxSprite(700, 130);
+			portraitRight.frames = Paths.getSparrowAtlas('weeb/bfPortraitEnter');
+			portraitRight.animation.addByPrefix('enter', 'bfPortraitEnter', 24, false);
+			portraitRight.updateHitbox();
+			portraitRight.scrollFactor.set();
+			add(portraitRight);
+			portraitRight.visible = false;
+		}
+		if (PlayState.SONG.song.toLowerCase() == 'pompous')
+		{
+			portraitLeft = new FlxSprite(-320, -100);
+			portraitLeft.frames = Paths.getSparrowAtlas('weeb/katrinePortrait_Spooky');
+			portraitLeft.animation.addByPrefix('enter', 'katrinePortraitHalloweenEnter', 24, false);
+			portraitLeft.updateHitbox();
+			portraitLeft.scrollFactor.set();
+			add(portraitLeft);
+			portraitLeft.visible = false;
+
+			portraitLeft2 = new FlxSprite(-320, -80);
+			portraitLeft2.frames = Paths.getSparrowAtlas('weeb/jacquiPortrait');
+			portraitLeft2.animation.addByPrefix('enter', 'jacquiPortraitEnter', 24, false);
+			portraitLeft2.updateHitbox();
+			portraitLeft2.scrollFactor.set();
+			add(portraitLeft2);
+			portraitLeft2.visible = false;
+
+			portraitRight = new FlxSprite(700, 130);
+			portraitRight.frames = Paths.getSparrowAtlas('weeb/bfPortraitEnter');
+			portraitRight.animation.addByPrefix('enter', 'bfPortraitEnter', 24, false);
+			portraitRight.updateHitbox();
+			portraitRight.scrollFactor.set();
+			add(portraitRight);
+			portraitRight.visible = false;
+		}
 
 		box.animation.play('normalOpen');
 		box.updateHitbox();
@@ -181,8 +274,21 @@ class DialogueBox extends FlxSpriteGroup
 
 		box.screenCenter(X);
 		portraitLeft.screenCenter(X);
+		if (portraitLeft2 != null)
+		{
+			portraitLeft2.screenCenter(X);
+		}
 
+		portraitLeft.x -= 300;
+		if (portraitLeft2 != null)
+		{
+			portraitLeft2.x -= 300;
+		}
+
+		box.x += 50;
+		box.y += 70;
 		handSelect = new FlxSprite(FlxG.width * 0.9, FlxG.height * 0.9).loadGraphic(Paths.image('weeb/pixelUI/hand_textbox'));
+		handSelect.x -= 50;
 		add(handSelect);
 
 		if (!talkingRight)
@@ -202,6 +308,8 @@ class DialogueBox extends FlxSpriteGroup
 		add(swagDialogue);
 
 		dialogue = new Alphabet(0, 80, "", false, true);
+		dropText.y += 40;
+		swagDialogue.y += 40;
 		// dialogue.x = 90;
 		// add(dialogue);
 	}
@@ -258,6 +366,10 @@ class DialogueBox extends FlxSpriteGroup
 						box.alpha -= 1 / 5;
 						bgFade.alpha -= 1 / 5 * 0.7;
 						portraitLeft.visible = false;
+						if (portraitLeft2 != null)
+						{
+							portraitLeft2.visible = false;
+						}
 						portraitRight.visible = false;
 						swagDialogue.alpha -= 1 / 5;
 						dropText.alpha = swagDialogue.alpha;
@@ -296,18 +408,32 @@ class DialogueBox extends FlxSpriteGroup
 		switch (curCharacter)
 		{
 			case 'dad':
+				if (portraitLeft2 != null)
+				{
+					portraitLeft2.visible = false;
+				}
 				portraitRight.visible = false;
 				if (!portraitLeft.visible)
 				{
-					portraitLeft.x -= 300;
 					portraitLeft.visible = true;
 					portraitLeft.animation.play('enter');
 				}
+			case 'rb':
+				portraitRight.visible = false;
+				portraitLeft.visible = false;
+				if (!portraitLeft2.visible)
+				{
+					portraitLeft2.visible = true;
+					portraitLeft2.animation.play('enter');
+				}
 			case 'bf':
+				if (portraitLeft2 != null)
+				{
+					portraitLeft2.visible = false;
+				}
 				portraitLeft.visible = false;
 				if (!portraitRight.visible)
 				{
-					portraitLeft.x += 300;
 					portraitRight.visible = true;
 					portraitRight.animation.play('enter');
 				}
